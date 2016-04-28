@@ -11,5 +11,23 @@
     <br>
     <br>
   <a href="/SignUp">Sign up</a>
+  <br>
+  <br>
+  <p><% for(var i=0;i<req.session.countries.length;i++){
+      %>
+    <%=req.session.countries[i].Name %>
+
+    <%}%>
+    <% for(var i=0;i<req.session.Cities.length;i++){
+    %>
+    <%=req.session.Cities[i].Name %>
+
+    <%}%>
+    <% for(var i=0;i<req.session.buildings.length;i++){
+    %>
+    <%=req.session.buildings[i].Name %>
+
+    <%}%>
+    </p>
   </body>
 </html>

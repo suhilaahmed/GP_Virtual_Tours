@@ -9,5 +9,141 @@
 <p>Welcome to <%= title %></p>
 <a href="Login">Login</a>
 <a href="/">Home</a>
+<br>
+<br>
+
+<form method="post" action="/Hello"  id="contactform">
+
+    <br>
+    <br>
+    <br>
+    <p class="contact"><label for="name">Name</label></p>
+    <input type="text" name="Fname" value="" placeholder="Full Name" id="FN" />
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="contact"><label for="email">Email</label></p>
+    <input type="text" name="email" value="" placeholder='Email' id="em" size="45" onblur="EmailCheck()"/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="contact"><label for="username">Passwprd</label></p>
+    <input type="password" name="newpassword1" value="" placeholder="Password"  size="45" maxlength="10" id='pass'/>
+
+    <br/>
+    <br/>
+    <br/>
+    <p class="contact"><label for="password">Confirm password</label></p>
+    <input type="password" name="confirm_password" value=""  placeholder="Confirm Password"  size="45" maxlength="10" id='cpass'/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="contact"><label for="phone">Mobile phone</label></p>
+    <input type="text" name="mobile" value="" placeholder="Mobile Number +20"  maxlength="11" size="35" id='mo'/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="contact"><label for="password">Facebook Account</label></p>
+    <input type="text" name="Face" value="" placeholder="Facebook Account"   size="45" id='face'/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p class="contact"><label for="password">Flickr Account</label></p>
+    <input type="text" name="flickr" value="" placeholder="Flickr Account"   size="45" id='flickr'/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+             <select name="month" required="" >
+                 <option value="" disabled selected>Month</option>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+                 <option value="9">9</option>
+                 <option value="10">10</option>
+                 <option value="11">11</option>
+                 <option value="12">12</option>
+
+             </select>
+             <select name="day" required="" >
+                 <option value="" disabled selected>Day</option>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+                 <option value="7">7</option>
+                 <option value="8">8</option>
+                 <option value="9">9</option>
+                 <option value="10">10</option>
+                 <option value="11">11</option>
+                 <option value="12">12</option>
+                 <option value="13">13</option>
+                 <option value="14">14</option>
+                 <option value="15">15</option>
+                 <option value="16">16</option>
+                 <option value="17">17</option>
+                 <option value="18">18</option>
+                 <option value="19">19</option>
+                 <option value="20">20</option>
+                 <option value="21">21</option>
+                 <option value="22">22</option>
+                 <option value="23">23</option>
+                 <option value="24">24</option>
+                 <option value="25">25</option>
+                 <option value="26">26</option>
+                 <option value="27">27</option>
+                 <option value="28">28</option>
+                 <option value="29">29</option>
+                 <option value="30">30</option>
+                 <option value="31">31</option>
+
+
+             </select>
+              <select name="year" required="">
+                  <option value="" disabled selected>Year</option>
+                  <option>1994</option>
+                  <option>1995</option>
+                  <option>1996</option>
+                  <option>1997</option>
+                  <option>1998</option>
+                  <option>1999</option>
+                  <option>2000</option>
+                  <option>2001</option>
+                  <option>2002</option>
+                  <option>2003</option>
+                  <option>2004</option>
+                  <option>2005</option>
+                  <option>2006</option>
+                  <option>2007</option>
+                  <option>2008</option>
+                  <option>2009</option>
+                  <option>2010</option>
+                  <option>2011</option>
+                  <option>2012</option>
+                  <option>2013</option>
+                  <option>2014</option>
+                  <option>2015</option>
+              </select>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <input class="buttom" type="submit" value="Sign me up!" onclick="return check()"   id="go"/>
+</form>
 </body>
 </html>
