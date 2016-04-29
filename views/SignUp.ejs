@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
 
-    <link href="Header_Footer.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/Header_Footer.css' />
 
 </head>
-<body id="bodyStyle">
+<body class="bodyStyle">
 
 
-<div id="Header">
+<div class="Header">
 
     <div id="menu">
         <ul>
@@ -25,60 +22,37 @@
 
     </div>
     <header>
-        <h2><span> Sign up </span></h2>
-        <div>
-            <form>
-                <input  name="submit" value="Upload Image" type="submit">
-            </form>
-        </div>
+        <p id="headerStyle"> Sign up </p>
+        <p id="subHeader">Let us take you to an amazing tour!</p>
+
     </header>
+    <header id="imgLogo"> <img src="/images/Pyramids.png"> </header>
 
     <form class="formStyle">
-        <p class="contact"><label for="name">Name</label></p>
-        <input id="inputStyle" name="name" placeholder="First and last name" required="" tabindex="1" type="text">
 
-        <p class="contact"><label for="email">Email</label></p>
-        <input id="inputStyle" name="email" placeholder="example@domain.com" required="" type="email">
+        <p><label id="paragraph" for="name">Username</label></p>
+        <input id="inputStyle" name="name" placeholder=" First and last name" required="" tabindex="1" type="text">
 
-        <p class="contact"><label for="username">Create a username</label></p>
-        <input id="inputStyle" name="username" placeholder="username" required="" tabindex="2" type="text">
+        <p ><label id="paragraph" for="email">Email</label></p>
+        <input id="inputStyle" name="email" placeholder=" example@domain.com" required="" type="email">
 
-        <p class="contact"><label for="password">Create a password</label></p>
-        <input type="password" id="password" name="password" required="">
-        <p class="contact"><label for="repassword">Confirm your password</label></p>
-        <input type="password" id="repassword" name="repassword" required="">
-        <p class="contact"><label for="phone">Mobile phone</label></p>
-        <input id="inputStyle" name="phone" placeholder="phone number" required="" type="text"> </br></br>
 
-        <p ><label>Birthday</label></p>
-        <label >
-            <select  name="BirthMonth">
-                <option value="">Month </option>
-                <option  value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-        </label>
+        <p ><label id="paragraph" for="password">Password</label></p>
+        <input id="inputStyle" type="password" id="password" name="password" required="">
+        <p ><label id="paragraph" for="repassword">Confirm password</label></p>
+        <input id="inputStyle" type="password" id="repassword" name="repassword" required="">
+        <p ><label id="paragraph" for="phone">Mobile phone</label></p>
+        <input id="inputStyle" name="phone" placeholder=" phone number" required="" type="text"> </br></br>
 
-        <label> Day <input class="birthday" maxlength="2" name="BirthDay"  placeholder="Day" required=""></label>
-        <label>Year <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label>
+
 
         <br>
 
-        <input  name="submit" value="Submit" type="submit">
+        <input id="inputStyle"  name="submit" value="SIGN UP" type="submit">
     </form>
 
 
-    <div id="footer">
+    <div class="footer">
         <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
         Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
 
