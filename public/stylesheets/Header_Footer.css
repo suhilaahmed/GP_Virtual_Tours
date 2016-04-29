@@ -1,0 +1,110 @@
+
+.bodyStyle {
+    width:100%;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+
+
+}
+
+.Header {
+    margin: auto;
+    width: 960px;
+
+}
+.Header #imgLogo{
+    width:150px;
+    height:150px;
+    float: left;
+
+}
+
+.Header #headerStyle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    color:#993366;
+}
+.Header #subHeader {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    color: #CC6699;
+}
+#menu {
+    position: center;
+    width: 860px;
+    height: 40px;
+    margin: 30px 0 0 0;
+    padding: 20px 20px 20px 30px;
+    background-color:#990033	;
+
+
+}
+
+#menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline;
+}
+
+#menu ul li a{
+    float: left;
+    width: 140px;
+    height: 30px;
+    padding: 10px 0 0 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Verdana";
+    color: white;
+
+}
+
+#menu ul li .lastmenu{
+    border-right: 1px solid #34373b;
+}
+
+#menu li a:hover, #menu li .current{
+    color: white;
+}
+
+
+
+
+.footer {
+    clear: both;
+    padding: 20px 0px 0px 0px;
+    width: 960px;
+    height: 60px;
+    text-align: center;
+}
+
+.footer a{
+    font-weight: normal;
+    color: #CC6699;
+
+}
+
+
+.formStyle{
+     width:470px;
+    float: right; padding-top:0px;
+
+}
+
+.formStyle #inputStyle[type="text"] { width: 400px;  height:30px; border-radius: 5px;}
+.formStyle #inputStyle[type="email"] {width:400px; height:30px;border-radius: 5px;}
+.formStyle #inputStyle[type="password"] {width:400px; height:30px;border-radius: 5px;}
+.formStyle #inputStyle[type="submit"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+.formStyle #paragraph {color:#993366;}
