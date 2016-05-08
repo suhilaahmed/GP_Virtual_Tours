@@ -20,23 +20,20 @@ var oth = loadPanos.others;
 
 ///////////////////////////////////////////////////////////////////////
 
-/* GET home page. */
 
 router.get('/',urlencodedParser ,function(req, res, next) {
-
     for( var i=0;i<ci.length;i++){
-      ci[i].ImagePath=CityImages[i];
+        ci[i].ImagePath=CityImages[i];
     }
     for( var i=0;i<bl.length;i++){
-      bl[i].ImagePath=BuildingImages[i];
+        bl[i].ImagePath=BuildingImages[i];
     }
     for( var i=0;i<mu.length;i++){
-      mu[i].ImagePath=MuseumsImages[i];
+        mu[i].ImagePath=MuseumsImages[i];
     }
     for( var i=0;i<oth.length;i++){
-      oth[i].ImagePath=OtherImages[i];
+        oth[i].ImagePath=OtherImages[i];
     }
-   //console.log(co);
     req.session.countries = co;
     req.session.Cities=ci;
     req.session.buildings=bl;

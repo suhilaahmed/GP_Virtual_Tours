@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var login = require('./routes/Login');
 var sign = require('./routes/Signup');
 var hello = require('./routes/Hello');
+var ViewPano = require('./routes/ViewPanorama');
 var app = express();
 
 ///Sessions/////////////
@@ -44,6 +45,8 @@ app.use('/Login', login);
 app.use('/SignUp', sign);
 
 app.use('/Hello', hello);
+app.use('/ViewPanorama', ViewPano);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
