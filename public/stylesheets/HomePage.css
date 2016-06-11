@@ -1,0 +1,55 @@
+
+.bodyStyle {
+    width:100%;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+
+
+}
+
+.Header {
+    margin: auto;
+    width: 960px;
+
+}
+.Header #imgLogo{
+    width:100px;
+    height:100px;
+    float: left;
+    display: inline;
+
+}
+
+.Header #headerStyle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    color:#993366;
+}
+
+
+
+.footer {
+    clear: both;
+    padding: 20px 0px 0px 0px;
+    width: 960px;
+    height: 60px;
+    text-align: center;
+}
+
+.footer a{
+    font-weight: normal;
+    color: #CC6699;
+
+}
+
+
+.formStyle{
+    width:470px;
+    float: left; padding-top:0px;
+
+}

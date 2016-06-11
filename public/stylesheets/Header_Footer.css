@@ -24,9 +24,10 @@
 }
  #imgLeft{
      margin-top: 10%;
+     margin-right: 10%;
     width:320px;
     height:200px;
-    float: left;
+    float: right;
 
 }
 
@@ -107,7 +108,7 @@
 
 .formStyle{
      width:470px;
-    float: right; padding-top:0px;
+    float: left; padding-top:0px;
 
 }
 
@@ -116,3 +117,5 @@
 .formStyle #inputStyle[type="password"] {width:400px; height:30px;border-radius: 5px;}
 .formStyle #inputStyle[type="submit"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
 .formStyle #paragraph {color:#993366;}
+.formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
+.formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}

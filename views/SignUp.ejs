@@ -9,24 +9,24 @@
 
 
 <div class="Header">
-
+    <p id="subHeader">Let us take you to an amazing tour!</p>
     <div id="menu">
         <ul>
-            <li><a href="index.html"  >Home</a></li>
-            <li><a href="subpage.html">Countries</a></li>
-            <li><a href="subpage.html">Cities</a></li>
-            <li><a href="subpage.html">Museums</a></li>
-            <li><a href="subpage.html">Buildings</a></li>
-            <li><a href="index2.html" class="current" class="lastmenu">Sign up</a></li>
+            <li><a href="index.ejs"  >Home</a></li>
+            <li><a href="subpage.ejs">Countries</a></li>
+            <li><a href="subpage.ejs">Cities</a></li>
+            <li><a href="subpage.ejs">Museums</a></li>
+            <li><a href="subpage.ejs">Buildings</a></li>
+            <li><a href="/views/SignUp.ejs" class="current" class="lastmenu">Sign up</a></li>
         </ul>
 
     </div>
     <header>
         <p id="headerStyle"> Sign up </p>
-        <p id="subHeader">Let us take you to an amazing tour!</p>
+
 
     </header>
-    <header id="imgLogo"> <img src="/images/Pyramids.png"> </header>
+     <img id="imgLeft" src="http://localhost:3000/images/virtualtour.png">
 
     <form class="formStyle">
 
@@ -46,7 +46,29 @@
 
 
 
-        <br>
+            <p id="paragraph">Birthday</p>
+            <label>
+                <select id="Month" name="BirthMonth">
+                    <option value="">Month </option>
+                    <option  value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </label>
+
+            <label> Day <input id="birthDay" maxlength="2" name="BirthDay"  placeholder=" Day" required=""></label>
+            <label>Year <input id="birthDay" maxlength="4" name="BirthYear" placeholder=" Year" required=""></label>
+
+        <br><br>
 
         <input id="inputStyle"  name="submit" value="SIGN UP" type="submit">
     </form>
