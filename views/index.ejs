@@ -10,15 +10,10 @@
   <a href="/Login">Login</a>
     <br>
     <br>
-  <a href="/SignUp">Sign up</a>
-    <a href="/Home.ejs"></a>
-  <br>
-  <br>
-  <p><% for(var i=0;i<req.session.countries.length;i++){
-      %>
-    <%=req.session.countries[i].Name %>
 
-    <%}%>
+  <br>
+  <br>
+  <p>
     <% for(var i=0;i<req.session.Cities.length;i++){
     %>
     <%=req.session.Cities[i].Name %>
@@ -27,7 +22,7 @@
     <% for(var i=0;i<req.session.buildings.length;i++){
     %>
     <%=req.session.buildings[i].Name %>
-
+    <a href="/ViewPanorama?link=<%=req.session.buildings[i].ImagePath%>&Type=Buildings">View</a>
     <%}%>
     </p>
   </body>
