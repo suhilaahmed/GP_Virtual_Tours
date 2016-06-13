@@ -9,6 +9,7 @@ var step = require('step');
 var Sync = require('sync');
 var Q = require('q');
 var sunc=require('synchronize');
+var wait=require('wait.for-es6');
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var Uploader={};
@@ -53,9 +54,12 @@ var Get= function (req,res) {
 
 router.get('/',urlencodedParser ,function(req, res, next) {
    // var data=sunc.sync(res, 'render');
-    Get(req,res);
+    //Get(req,res);
+    var link=req.query.link;
+    var type=req.query.Type;
+    GetUplo.GetUploader(req,res,link,type);
 
-    res.render('ViewPanorama', { title: 'View',req:req,res:res},function(err, data){});
+    //res.render('ViewPanorama', { title: 'View',req:req,res:res});
 
 
 

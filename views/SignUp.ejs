@@ -28,27 +28,30 @@
     </header>
      <img id="imgLeft" src="http://localhost:3000/images/virtualtour.png">
 
-    <form class="formStyle">
+    <form class="formStyle" method="post" action="/Hello">
 
         <p><label id="paragraph" for="name">Username</label></p>
-        <input id="inputStyle" name="name" placeholder=" First and last name" required="" tabindex="1" type="text">
+        <input id="inputStyle" name="Fname" placeholder=" First and last name" required="" tabindex="1" type="text">
 
         <p ><label id="paragraph" for="email">Email</label></p>
         <input id="inputStyle" name="email" placeholder=" example@domain.com" required="" type="email">
 
 
         <p ><label id="paragraph" for="password">Password</label></p>
-        <input id="inputStyle" type="password" id="password" name="password" required="">
+        <input id="inputStyle" type="password" id="password" name="newpassword1" required="">
         <p ><label id="paragraph" for="repassword">Confirm password</label></p>
         <input id="inputStyle" type="password" id="repassword" name="repassword" required="">
         <p ><label id="paragraph" for="phone">Mobile phone</label></p>
         <input id="inputStyle" name="phone" placeholder=" phone number" required="" type="text"> </br></br>
-
+        <p ><label id="paragraph" for="Face">Facebook Account</label></p>
+        <input id="inputStyle" name="Face" placeholder=" facebook account" required="" type="text"> </br></br>
+        <p ><label id="paragraph" for="Flickr">Flickr Account</label></p>
+        <input id="inputStyle" name="Flickr" placeholder=" flickr account" required="" type="text"> </br></br>
 
 
             <p id="paragraph">Birthday</p>
             <label>
-                <select id="Month" name="BirthMonth">
+                <select id="Month" name="month">
                     <option value="">Month </option>
                     <option  value="01">January</option>
                     <option value="02">February</option>
@@ -65,8 +68,72 @@
                 </select>
             </label>
 
-            <label> Day <input id="birthDay" maxlength="2" name="BirthDay"  placeholder=" Day" required=""></label>
-            <label>Year <input id="birthDay" maxlength="4" name="BirthYear" placeholder=" Year" required=""></label>
+            <label>
+                <select id="Month" name="day" required="" >
+                    <option value="" disabled selected>Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+
+
+                </select>
+                </label>
+                <label>
+                <select id="Month" name="year" required="">
+                    <option value="" disabled selected>Year</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>1996</option>
+                    <option>1997</option>
+                    <option>1998</option>
+                    <option>1999</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                </select>
+            </label>
+
 
         <br><br>
 

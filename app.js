@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var login = require('./routes/Login');
 var sign = require('./routes/Signup');
 var hello = require('./routes/Hello');
+var UProfile= require('./routes/UserProfile');
 var ViewPano = require('./routes/ViewPanorama');
 var app = express();
 
@@ -43,7 +44,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/Login', login);
 app.use('/SignUp', sign);
-
+app.use('/UserProfile', UProfile);
 app.use('/Hello', hello);
 app.use('/ViewPanorama', ViewPano);
 

@@ -18,8 +18,7 @@ var GetUploader = function(req,res,Link,type) {
             UserID = rows[0].UserID;
             GetUploaderDB(UserID);
             req.session.Uploader=Uploader;
-            //console.log((req.session.Uploader)+"MMMMMMMMMM");
-
+            res.render('ViewPanorama', { title: 'View',req:req,res:res});
         });
     }
     if (type == "Cities") {
@@ -29,7 +28,7 @@ var GetUploader = function(req,res,Link,type) {
             UserID = rows[0].UserID;
             GetUploaderDB(UserID);
             req.session.Uploader=Uploader;
-            console.log((req.session.Uploader)+"MMMMMMMMMM");
+            res.render('ViewPanorama', { title: 'View',req:req,res:res});
 
         });
     }
@@ -40,8 +39,7 @@ var GetUploader = function(req,res,Link,type) {
             UserID = rows[0].UserID;
             GetUploaderDB(UserID);
             req.session.Uploader=Uploader;
-            console.log((req.session.Uploader)+"MMMMMMMMMM");
-
+            res.render('ViewPanorama', { title: 'View',req:req,res:res});
         });
     }
     if (type == "Other") {
@@ -51,17 +49,12 @@ var GetUploader = function(req,res,Link,type) {
             UserID = rows[0].UserID;
             GetUploaderDB(UserID);
             req.session.Uploader=Uploader;
-            console.log((req.session.Uploader)+"MMMMMMMMMM");
-
+            res.render('ViewPanorama', { title: 'View',req:req,res:res});
         });
     }
 
 
 };
-
-var storeSession=function(req,res,Uploader){
-    req.session.Uploader=Uploader;
-}
 
 function GetUploaderDB(UID){
 

@@ -29,9 +29,9 @@ var SignupDB = function(req,res){
     FullName= req.body.Fname;
     Email = req.body.email;
     Password = req.body.newpassword1;
-    PhoneNumber = req.body.mobile;
+    PhoneNumber = req.body.phone;
     FacebookAcc = req.body.Face;
-    FlickerAcc = req.body.flickr;
+    FlickerAcc = req.body.Flickr;
     BirthDate = new Date(birth);
 
 

@@ -9,6 +9,9 @@ var router = express.Router();
 router.get('/',urlencodedParser, function(req, res, next) {
     res.render('SignUp', { title: 'Sign up' });
 });
+router.post('/',urlencodedParser, function(req, res, next) {
+    res.render('SignUp', { title: 'Sign up' });
+});
 
 
 module.exports = router;
