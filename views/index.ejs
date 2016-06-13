@@ -1,29 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  <a href="/Login">Login</a>
-    <br>
-    <br>
+<head>
+  <title>Panorama view-visit places</title>
+  <link rel='stylesheet' href='/stylesheets/HomePage.css' />
 
-  <br>
-  <br>
-  <p>
-    <% for(var i=0;i<req.session.Cities.length;i++){
-    %>
-    <%=req.session.Cities[i].Name %>
+</head>
+<body class="bodyStyle">
+<!--<img id="imglogo" src="http://localhost:3000/images/logo.png">-->
 
-    <%}%>
-    <% for(var i=0;i<req.session.buildings.length;i++){
-    %>
-    <%=req.session.buildings[i].Name %>
-    <a href="/ViewPanorama?link=<%=req.session.buildings[i].ImagePath%>&Type=Buildings">View</a>
-    <%}%>
-    </p>
-  </body>
+
+<div class="Header">
+  <p id="subHeader">Virtual Tours</p>
+  <div id="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="subpage.ejs">Countries</a></li>
+      <li><a href="subpage.ejs">Cities</a></li>
+      <li><a href="subpage.ejs">Museums</a></li>
+      <li><a href="subpage.ejs">Buildings</a></li>
+      <li><a href="/SignUp" class="current" class="lastmenu">Sign up</a></li>
+    </ul>
+
+  </div>
+  <img id="imgCover" src="http://localhost:3000/images/cover.jpg">
+
+  <div id="content">
+
+    <!-- left column -->
+    <div id="leftcolumn">
+      <div class="login_form">
+        <h1 id="LoginFormStyle">Login</h1>
+
+        <form class="formStyle" method="get" action="#">
+          <div ><label id="textColor">Email </label><input id="inputStyle" name="email_address" type="email" class="inputfield" id="email_addremss" maxlength="60"/>
+          </div>
+          <br>
+          <div><label id="textColor">Password </label><input id="inputStyle" name="password" type="password" class="inputfield" id="password" maxlength="60"/>
+          </div>
+          <br>
+          <input id="buttonLogin" type="submit" name="Submit" value="Login" />
+        </form>
+      </div>
+
+    </div>
+    <h1 id="Description">Description</h1>
+    <p id="textDescription">Virtual Tours is a web application for
+      different types of users,you can visit  </p>
+      <p id="textDescription">places, countries,etc. and interact
+      with the place through and get information  </p>
+      <p id="textDescription">about specific places.</p>
+    <br><br>
+    <div class="circle" >
+
+    </div>
+    <div class="circle" >
+
+    </div>
+    <div class="circle" >
+
+    </div>
+    <div class="circle" >
+
+    </div>
+    <div class="circle" >
+
+    </div>
+    <div id="MembersName">
+    <h3>Team Leader</h3>
+    <h4>Mostafa Abdallaah</h4>
+    <h2>Team Member</h2>
+    <h3>Shaimaa Farouk</h3>
+    <h2>Team Member</h2>
+    <h3>Sara Mokhtar</h3>
+    <h2>Team Member</h2>
+    <h3>Suhila Ahmed</h3>
+    <h2>Team Member</h2>
+    <h3>Heba Moustafa</h3>
+      </div>
+  </div>
+
+  <div class="footer">
+    <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
+    Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
+
+  </div>
+
+
+</div>
+
+</body>
 </html>
