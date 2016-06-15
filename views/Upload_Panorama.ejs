@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+
+<a href="Login">Login</a>
+<a href="/">Home</a>
+
+<form action="/UploadSuccess_Editor" method="get">
+
+    <select id="Month" name="Count" required="" >
+        <option value="Egypt">Egypt</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="Italy">Italy</option>
+        <option value="USA">USA</option>
+        </select>
+
+    <input id="inputStyle"  name="submit" value="submit" type="submit">
+</form>
+</body>
+</html>
