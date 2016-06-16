@@ -15,31 +15,40 @@
     <ul>
       <li><a href="/">Home</a></li>
       <div class="dropdown">
-      <ul>
-        <li href="subpage.ejs">Countries</li>
-        <a id="myDropdown" class="dropdown-content">Egypt</a>
-      </ul>
-
-      <ul>
-        <li href="subpage.ejs">Cities</li>
-        <a id="myDropdown" class="dropdown-content">Cairo</a>
-      </ul>
-
-
-      <ul>
-        <li href="subpage.ejs">Museums</li>
-        <a id="myDropdown" class="dropdown-content">Cairo Museum</a>
-      </ul>
-
-      <ul>
-        <li href="subpage.ejs">Buildings</li>
-        <a id="myDropdown" class="dropdown-content">Cairo Tower</a>
-      </ul>
+        <li><a>Countries</a>
+        <ul>
+          <li><a href="#">Egypt</a></li>
+          <li><a href="#">India</a></li>
+        </ul>
+        </li>
         </div>
+      <div class="dropdown">
+        <li><a>Cities</a>
+          <ul>
+            <li><a href="#">Cairo</a></li>
+          </ul>
+        </li>
+        </div>
+      <div class="dropdown">
+        <li><a>Museums</a>
+         <!-- <ul>
+            <li><a href="#">Egyptian Museum</a></li>
+          </ul>-->
+        </li>
+        </div>
+      <div class="dropdown">
+        <li><a>Buildings</a>
+          <ul>
+            <li><a href="#">Cairo Tower</a></li>
+          </ul>
+        </li>
+        </div>
+      <div class="dropdown">
       <li><a href="/SignUp" class="current" class="lastmenu">Sign up</a></li>
+      </div>
     </ul>
-
   </div>
+
   <img id="imgCover" src="http://localhost:3000/images/cover.jpg">
 
   <div id="content">
@@ -61,40 +70,85 @@
       </div>
 
     </div>
-    <h1 id="Description">Description</h1>
-    <p id="textDescription">Virtual Tours is a web application for
-      different types of users,you can visit  </p>
-      <p id="textDescription">places, countries,etc. and interact
-      with the place through and get information  </p>
-      <p id="textDescription">about specific places.</p>
-    <br><br>
-    <div class="circle" >
+    <h1 id="Title">Welcome to Panoramic Tourism</h1>
+
+<div>
+    <div id="BoxText">
+      <h3 id="TextInBox">Virtual Tours</h3>
+      <p id="TextInBox2"> Have ever visit Paris, China, New York or even maldives before?,Even if you did, you are welcome with us to enjoy
+                         a home virtual tour to any place you have been dreamed to visit, put your seat built and enjoy.</p>
+      <br><a href="/About" id="buttonBox">Learn More about us</a>
+    </div>
+    <div id="BoxText">
+      <h3 id="TextInBox">Free</h3>
+      <p id="TextInBox2"> All you need to use our web site is to <a href="https://msdn.microsoft.com/en-us/library/hh438998.aspx">Have a Microdoft Kinect Sensor</a>
+        <a href="http://www.microsoftstore.com/store/msusa/en_US/pdp/Kinect-Adapter-for-Windows/productID.308803600">&amp; Kinect Adapter for Windows</a>
+        plug into your Computer and to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=44561">download SDK</a> and install and run it.
+        <br>Finally!!you can enjoy different experience</p>
+      <a href="https://en.wikipedia.org/wiki/Kinect" id="buttonBox">Learn More about Kinect</a>
+    </div>
+
+</div>
+    <div id="textKinect">
+
+      <li><strong>Improved body tracking </strong>
+      </li>
+      <li><strong>Depth sensing:
+        </strong>
+        <ul>
+          <li>
+            &nbsp;&nbsp;&nbsp;&nbsp;  512 x 424
+          </li>
+          <li>
+            &nbsp;&nbsp;&nbsp;&nbsp; 30 Hz
+          </li>
+          <li>
+            &nbsp;&nbsp;&nbsp;&nbsp; FOV: 70 x 60<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            One mode: .5–4.5 meters
+          </li>
+        </ul>
+      </li>
+
+      <li><strong>1080p color camera
+          30 Hz (15 Hz in low light)</strong></li>
+      <li><strong>New active infrared (IR) capabilities
+          512 x 424
+          30Hz</strong></li>
+      <li><strong>Wider/expanded field of view</strong></li>
+
+      </ul>
+      <br>
+      <br>
+      <a href="https://dev.windows.com/en-us/kinect/hardware" id="buttonBox">Learn More</a>
+    </div>
+
+
+        <h2 id="TitleKinect">Microsoft Kinect v2</h2>
+    <div id="displayLine">
+      <a href="https://msdn.microsoft.com/en-us/library/hh438998.aspx">
+
+        <img id="imgRight"src="/images/kinectv2Sensor.jpg" alt="">
+
+      </a>
 
     </div>
-    <div class="circle" >
+      <h2 id="TitleKinect">Panoramic Tourism Features</h2>
 
-    </div>
-    <div class="circle" >
-
-    </div>
-    <div class="circle" >
-
-    </div>
-    <div class="circle" >
-
-    </div>
-    <div id="MembersName">
-    <h3>Team Leader</h3>
-    <h4>Mostafa Abdallaah</h4>
-    <h2>Team Member</h2>
-    <h3>Shaimaa Farouk</h3>
-    <h2>Team Member</h2>
-    <h3>Sara Mokhtar</h3>
-    <h2>Team Member</h2>
-    <h3>Suhila Ahmed</h3>
-    <h2>Team Member</h2>
-    <h3>Heba Moustafa</h3>
+      <div id="textFeatures">
+        <ul>
+          <p>By using this website you can : </p>
+          <li>View different places virtually.</li>
+          <li>uploading a new panoramic views</li>
+          <li>discover new places </li>
+        </ul>
+        <p><strong>A very powerful virtual map for the passengers .</strong></p>
       </div>
+    <div id="displayLine">
+        <img id="imgRight" src="/images/Kinect-Adapter-for-Windows-620x363.png" alt="">
+
+    </div>
+
   </div>
 
   <div class="footer">
@@ -102,9 +156,8 @@
     Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
 
   </div>
-
-
 </div>
-
+</div>
+</div>
 </body>
 </html>
