@@ -11,7 +11,10 @@ var login = require('./routes/Login');
 var sign = require('./routes/Signup');
 var hello = require('./routes/Hello');
 var UProfile= require('./routes/UserProfile');
+var UPload= require('./routes/Upload_Panorama');
 var ViewPano = require('./routes/ViewPanorama');
+var SuccessUpload = require('./routes/UploadSuccess_Editor');
+
 var app = express();
 
 ///Sessions/////////////
@@ -47,6 +50,8 @@ app.use('/SignUp', sign);
 app.use('/UserProfile', UProfile);
 app.use('/Hello', hello);
 app.use('/ViewPanorama', ViewPano);
+app.use('/Upload_Panorama', UPload);
+app.use('/UploadSuccess_Editor',SuccessUpload);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

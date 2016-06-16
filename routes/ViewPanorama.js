@@ -4,12 +4,13 @@ var bodyParser = require('body-parser');
 var loadPanos= require('./GetPanoramaDB');
 var GetUplo= require('./GetUploaderDB');
 var DBConn= require('../DatabaseConn/DBConnection');
-var async = require('async');
+/*var async = require('async');
 var step = require('step');
 var Sync = require('sync');
 var Q = require('q');
 var sunc=require('synchronize');
-var wait=require('wait.for-es6');
+var wait=require('wait.for-es6');*/
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 var Uploader={};
