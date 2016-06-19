@@ -22,14 +22,6 @@
     display: inline;
 
 }
- #imgLeft{
-     margin-top: 10%;
-     margin-right: 10%;
-    width:320px;
-    height:200px;
-    float: right;
-
-}
 
 .Header #headerStyle {
     font-family: "Times New Roman", Times, serif;
@@ -184,15 +176,103 @@
     height: 100px;
 }
 .formStyle{
-     width:470px;
+    width:470px;
     float: left; padding-top:0px;
 
 }
 
-.formStyle #inputStyle[type="text"] { width: 400px;  height:30px; border-radius: 5px;}
+/*.formStyle #inputStyle[type="text"] { width: 400px;  height:30px; border-radius: 5px;}
 .formStyle #inputStyle[type="email"] {width:400px; height:30px;border-radius: 5px;}
 .formStyle #inputStyle[type="password"] {width:400px; height:30px;border-radius: 5px;}
-.formStyle #inputStyle[type="submit"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+.formStyle #inputStyle[type="file"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
 .formStyle #paragraph {color:#993366;}
 .formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
-.formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}
+.formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}*/
+
+.box {
+    background-color: white;
+    padding: 6.25rem 1.25rem;
+}
+
+.box + .box {
+    margin-top: 2.5rem;
+}
+.content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 3em 0;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+.inputfile-2 + label {
+    color: #d3394c;
+    border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+    color: #722040;
+}
+#BoxText {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 10px solid #990033;
+    float: left;
+    margin-left: 25px;
+    margin-top: 30px;
+
+}
+.formStyle{
+    width:400px;
+    float: left; padding-top:0px;
+
+}
+.formStyle #Month {width: 200px;  height:30px; border-radius: 5px;}
+.formStyle #paragraph {color:#993366;}
+#inputStyle { float: right; width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+#imgRight{
+    margin-top: 20%;
+    margin-right: 0%;
+    width:350px;
+    height:150px;
+    float: right;
+
+}
