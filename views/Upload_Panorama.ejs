@@ -3,7 +3,25 @@
 <head>
 
     <link rel='stylesheet' href='/stylesheets/UplodPanorama.css' />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
+                reader.onload = function (e) {
+                    $('#blah')
+                            .attr('src', e.target.result)
+                            .width(150)
+                            .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        readURL();
+    </script>
 </head>
 <body class="bodyStyle">
 
@@ -49,75 +67,45 @@
         </ul>
 
     </div>
-    <div class="content">
-        <div class="box">
-            <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
-            <label for="file-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
-        </div>
-    </div>
-    <img id="imgRight" src="http://localhost:3000/images/Pyramids.png">
     <div id="BoxText">
-        <form class="formStyle">
-            <label>
-                <p id="paragraph">Countries</p>
+    <form class="formStyle">
 
-                <select id="Month" name="month">
-                    <option value="">Choose.. </option>
-                    <option  value="01">Egypt</option>
-                    <option value="02">India</option>
-                    <option value="03">France</option>
-                    <option value="04">England</option>
-                    <option value="05">Italy</option>
-                    <option value="06">China</option>
-                    <option value="07">Turkey</option>
-                </select>
-            </label>
-            <label>
-                <p id="paragraph">Cities</p>
+        <input id="IInputStyle" type='file' onchange="readURL(this);" />
 
-                <select id="Month" name="month">
-                    <option value="">Choose.. </option>
-                    <option  value="01">Cairo</option>
-                    <option value="02">Delhi</option>
-                    <option value="03">Paris</option>
-                    <option value="04">London</option>
-                    <option value="05">Venice</option>
-                    <option value="06">China</option>
-                    <option value="07">Istanbul</option>
-                </select>
-            </label>
-            <label>
-                <p id="paragraph">Museums</p>
+        <img id="blah" src="#" alt="your image" />
 
-                <select id="Month" name="month">
-                    <option value="">Choose.. </option>
-                    <option  value="01">Cairo Museum</option>
-                    <option value="02">Delhi Museum</option>
-                    <option value="03">Lofer Museum</option>
-                    <option value="04">London</option>
-                    <option value="05">Venice</option>
-                    <option value="06">China</option>
-                    <option value="07">Istanbul</option>
-                </select>
-            </label>
-            <label>
-                <p id="paragraph">Buildings</p>
 
-                <select id="Month" name="month">
-                    <option value="">Choose.. </option>
-                    <option  value="01">Cairo Tower</option>
-                    <option value="02">Taj Mahal</option>
-                    <option value="03">Eiffel Tower</option>
-                    <option value="04">London</option>
-                    <option value="05">Piza</option>
-                    <option value="06">The great wall of china</option>
-                    <option value="07">Castle</option>
-                </select>
-            </label>
-            <input id="inputStyle"  name="submit" value="Upload" type="submit">
-        </form>
+    </form>
+        <img id="imgRight" src="http://localhost:3000/images/a7san.png">
 
+            <form class="formStyle">
+                <label>
+                    <p id="paragraph">Countries</p>
+
+                    <select id="Month" name="month">
+                        <option value="">Choose.. </option>
+                        <option  value="01">Egypt</option>
+                        <option value="02">India</option>
+                        <option value="03">France</option>
+                        <option value="04">England</option>
+                        <option value="05">Italy</option>
+                        <option value="06">China</option>
+                        <option value="07">Turkey</option>
+                    </select>
+                </label>
+                <br>
+
+                <p id="paragraph"><input type="checkbox" value="Cities"/>Cities</p>
+                <p id="paragraph"><input type="checkbox" value="Museums"/>Museums</p>
+                <p id="paragraph"><input type="checkbox" value="Buildings"/>Buildings</p>
+                <p id="paragraph"><input type="checkbox" value="Others"/>Others</p>
+                <p><label id="paragraph" for="name">Name*</label></p>
+                <input id="InputStyle" name="Pname" placeholder=" City, Museum, Building or Other name.." required="" tabindex="1" type="text">
+                <br><br><br><br><input id="inputStyle"  name="submit" value="Upload" type="submit">
+            </form>
     </div>
+
+
     <div class="footer">
         <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
         Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
