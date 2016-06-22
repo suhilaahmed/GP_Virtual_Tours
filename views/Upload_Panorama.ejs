@@ -22,17 +22,16 @@
         }
         readURL();
     </script>
+
 </head>
 <body class="bodyStyle">
 
 
 <div class="Header">
-    <img id="subHeader" src="http://localhost:3000/images/logo2.png">
+    <img id="subHeader" src="http://localhost:3000/images/logoUpdated.png">
     <div id="subHeader2">
         <p>Let us take you to an amazing tour</p>
-        <form action="/SignUp">
-            <input id="SignButton" type="submit" name="Signup" value="SIGN UP">
-        </form></div>
+        </div>
     <div id="menu">
         <ul>
             <li><a href="/"  >Home</a></li>
@@ -74,8 +73,11 @@
     <div id="BoxText">
     <form class="formStyle">
 
-        <input id="IInputStyle" type='file' onchange="readURL(this);" />
-
+        <div class="upload">
+        <input  name="Upload" type='file' onchange="readURL(this);" />
+            <label for="Upload"><span>Upload</span></label>
+        </div>
+        <br>
         <img id="blah" src="#" alt="your image" />
 
 
