@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <link rel='stylesheet' href='/stylesheets/Header_Footer.css' />
+
 </head>
-<body>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %> User <%=req.session.User.FullName%></p>
-<a href="Login">Login</a>
-    <a href="/">Home</a>
+<body class="bodyStyle">
+
+
+<div class="Header">
+    <img id="imgLogo" src="http://localhost:3000/images/logo2.png">
+    <p id="subHeader">Let us take you to an amazing tour!</p>
+    <div id="menu">
+        <ul>
+            <li><a href="/"  >Home</a></li>
+            <div class="dropdown">
+                <li><a>Countries</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Egypt</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Cities</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Museums</a>
+                    <!-- <ul>
+                       <li><a href="#">Egyptian Museum</a></li>
+                     </ul>-->
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Buildings</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo Tower</a></li>
+                    </ul>
+                </li>
+            </div>
+
+        </ul>
+
+    </div>
+    <header id="headerStyle">
+        <p > Hello  </p>
+        <p >Thank you for signing up with us</p>
+        <div >
+        <a  href="/UserProfile" >View Profile</a>
+        <a  href="/Upload_Panorama">Upload Panorama</a>
+        </div>
+    </header>
+
+
+     <br><br>
+    <br><br>
+    <br><br><br><br><br><br><br><br>
+
+
+
+
+
+    <div class="footer">
+        <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
+
+    </div>
+
+
+</div>
+
 </body>
 </html>
