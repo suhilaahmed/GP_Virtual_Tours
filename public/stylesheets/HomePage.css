@@ -10,7 +10,7 @@
 
 }
 #imgLogo{
-    width:10%;
+    width:20%;
     height:10%;
     float: left;
     display: inline;
@@ -41,12 +41,12 @@
 .Header #subHeader {
     padding: 0px 0px 0px 0px;
     text-align: left;
-    height: 170px;
-    width:260px;
+    height: 175px;
+    width:290px;
     display: inline;
 }
 .Header #subHeader2 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Calligraphy";
     font-size: 30px;
     margin-top: 60px;
     margin-right: 70px;

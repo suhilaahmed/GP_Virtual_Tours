@@ -15,20 +15,27 @@
     width: 960px;
 
 }
-#Logo{
-    margin-top: 0;
-    width:50px;
-    height:50px;
-    float:left;
+.Header #imgLogo{
+    width:120px;
+    height:100px;
+    float: left;
     display: inline;
+
+}
+#imgLeft{
+    margin-top: 10%;
+    margin-right: 10%;
+    width:320px;
+    height:200px;
+    float: right;
+
 }
 
 .Header #headerStyle {
     font-family: "Times New Roman", Times, serif;
-    font-size: 20px;
+    font-size: 35px;
     padding: 20px 10px 0px 0px;
     text-align: center;
-    link-align: center;
     color:#993366;
 }
 .Header #subHeader {
@@ -185,6 +192,65 @@
     overflow: scroll;
     height: 100px;
 }
-#LinkPages{
-    align-content: center;
+.formStyle{
+    width:470px;
+    float: left; padding-top:0px;
+
+}
+
+.formStyle #inputStyle[type="text"] { width: 400px;  height:30px; border-radius: 5px;}
+.formStyle #inputStyle[type="email"] {width:400px; height:30px;border-radius: 5px;}
+.formStyle #inputStyle[type="password"] {width:400px; height:30px;border-radius: 5px;}
+.formStyle #inputStyle[type="submit"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+.formStyle #paragraph {color:#993366;}
+.formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
+.formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}
+.formStyle #IInputStyle[type="file"] {margin-top: 50px}
+.UserImg{
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    text-align: right;
+}
+.circle {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 1em auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 5px solid #7a1f5c;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+div.upload {
+    width: 180px;
+    height: 57px;
+    background:url("http://localhost:3000/images/buttonHeba.png");
+    color: white;
+    overflow: hidden;
+    float: left;
+    margin-top: 30%;
+    border-radius: 5px;
+}
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+#PP{
+
+    background-color: white;
+    width: 150px;
+    height: 200px;
+    padding: 10px;
+    border: 10px solid #990033;
+    float: left;
+    margin-left: 25px;
+    margin-top: 30px;
+
 }

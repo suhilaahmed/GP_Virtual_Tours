@@ -33,12 +33,12 @@
 .Header #subHeader {
     padding: 0px 0px 0px 0px;
     text-align: left;
-    height: 170px;
-    width:260px;
+    height: 175px;
+    width:290px;
     display: inline;
 }
 .Header #subHeader2 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Calligraphy";
     font-size: 30px;
     margin-top: 60px;
     margin-right: 70px;
@@ -218,7 +218,22 @@
 }
 .formStyle #Month {width: 200px;  height:30px; border-radius: 5px;}
 .formStyle #paragraph {color:#993366;}
-.formStyle #IInputStyle[type="file"] {margin-top: 50px}
+.Uploaddd {
+
+    width: 157px;
+    height: 57px;
+    background-color: #990033;
+    overflow: hidden;
+}
+#UpName{
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+}
+#Hide{
+
+    opacity:0; z-index:2;
+}
 .formStyle #InputStyle[type="text"] { width: 250px;  height:30px; border-radius: 5px;}
 #inputStyle {
     float: right; margin-left:100px; width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
@@ -241,3 +256,19 @@
     border-radius: 5px;
     font-family: "Verdana";
     color:white}
+div.upload {
+    width: 180px;
+    height: 57px;
+    background:url("http://localhost:3000/images/buttonHeba.png");
+    color: white;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
