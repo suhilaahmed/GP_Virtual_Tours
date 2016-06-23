@@ -4,25 +4,64 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | TsetBranch</title>
-    <link rel="stylesheet" href="/TemplateData/style.css">
+    <link rel="stylesheet" href="/stylesheets/viewPanorama.css">
     <link rel="shortcut icon" href="/TemplateData/favicon.ico" />
     <script src="/TemplateData/UnityProgress.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dreamcodes/social_icons/tsc_social_icons.css" />
+
 
 </head>
-<body class="template">
-<p class="header"><span>Unity WebGL Player | </span>TsetBranch</p>
+<body class="bodyStyle" >
+<div class="Header">
+    <img id="subHeader" src="/images/logoUpdated.png">
 
+    <div id="menu">
+        <ul>
+            <li><a href="/"  >Home</a></li>
+            <div class="dropdown">
+                <li><a>Countries</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Egypt</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Cities</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Museums</a>
+                    <!-- <ul>
+                       <li><a href="#">Egyptian Museum</a></li>
+                     </ul>-->
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Buildings</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo Tower</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a href="/SignUp" class="current" class="lastmenu">Others</a></li>
+            </div>
+        </ul>
 
-<div class="template-wrap clear">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+    </div>
+<div id="widCanvas" >
+
+    <canvas  id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
     <br>
-    <div class="logo"></div>
-    <div class="fullscreen"><img src="/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-    <div class="title">TsetBranch</div>
+    <canvas id="bodyCanvas" width="398" height="339"></canvas>
+
 </div>
-<p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-<canvas id="bodyCanvas" width="398" height="339"></canvas>
+
 <script type='text/javascript'>
     var Module = {
         TOTAL_MEMORY: 268435456,
@@ -39,7 +78,24 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/javascripts/kinectControl/KinectSkyBox.js"></script>
 
+    <div class="background">
+        <div class="transbox">
+            <img class="circle">
+            <p>Username</p>
+            <div id="widHigh">
+            <a id="floatingRig"  href="http://www.facebook.com/PLACEHOLDER"></a>
+            <a id="floatingRig"  href="http://www.facebook.com/PLACEHOLDER"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
 
-<button value="Click" onclick="teest()"></button>
+    </div>
+
+
+</div>
+
 </body>
 </html>
