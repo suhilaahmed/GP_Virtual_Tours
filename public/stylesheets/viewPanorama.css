@@ -153,7 +153,7 @@
 
 .footer {
     clear: both;
-    padding: 20px 0px 0px 0px;
+    padding: 200px 0px 0px 0px;
     width: 960px;
     height: 60px;
     text-align: center;
@@ -205,9 +205,71 @@
 .formStyle #paragraph {color:#993366;}
 .formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
 .formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}
-#imageInfo{
-    margin-top: 100px;
+#InfoSize{
+
     width:910px;
     height:300px;
+    margin-top:100px ;
+
+}
+#imageInfo{
+    margin-top: 200px;
+    width:910px;
+    height:300px;
+
+}
+#Info{
+    color: #990033;
+    font-family: "Lucida Calligraphy";
+    font-size:  1.0em;
+    display: inline;
+    position: center;
+    margin-top: 5px;
+
+}
+#BoxText {
+    background-color: white;
+    width: 220px;
+    height: 230px;
+    border: 10px solid #990033;
+
+    margin-left: 30px;
+
+}
+div.background {
+    margin-top: 620px;
+    background: url("http://localhost:3000/images/black.png") repeat;
+    border: 2px solid black;
+    width:910px;
+    height:300px;
+}
+
+div.transbox {
+    margin: 30px;
+    background-color: #white;
+    border: 1px solid #990033;
+    height:230px;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+    margin: 5%;
+    font-family: "Lucida Calligraphy";
+    color: #990033;
+}
+.circle {
+
+    width: 100px;
+    height: 100px;
+    margin: 1em auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 5px solid #990033;
+    display: inline-block;
 
 }
