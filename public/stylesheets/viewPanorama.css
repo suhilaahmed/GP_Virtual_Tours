@@ -41,12 +41,12 @@
 .Header #subHeader {
     padding: 0px 0px 0px 0px;
     text-align: left;
-    height: 170px;
-    width:260px;
+    height: 175px;
+    width:290px;
     display: inline;
 }
 .Header #subHeader2 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Lucida Calligraphy";
     font-size: 30px;
     margin-top: 60px;
     margin-right: 70px;
@@ -205,3 +205,9 @@
 .formStyle #paragraph {color:#993366;}
 .formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
 .formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}
+#imageInfo{
+    margin-top: 100px;
+    width:910px;
+    height:300px;
+
+}

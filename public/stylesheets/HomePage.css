@@ -29,7 +29,12 @@
 
 }
 
+.LinkStyle:a , .LinkStyle:visited{
+    color: #990033;
+    font-family: "Lucida Calligraphy";
+    font-size: 1.0em;
 
+}
 
 .Header #headerStyle {
     font-family: "Times New Roman", Times, serif;
@@ -419,3 +424,6 @@
     border-radius: 5px;
     font-family: "Verdana";
     color:white}
+#FloatRight{
+    float: right;
+}
