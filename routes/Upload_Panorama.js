@@ -8,11 +8,11 @@ var router = express.Router();
 
 
 router.get('/',urlencodedParser, function(req, res, next) {
-    res.render('Upload_Panorama', { title: 'Upload Panorama' });
+    res.render('Upload_Panorama', { title: 'Upload Panorama',req:req });
 });
 
 router.post('/',urlencodedParser, function(req, res, next) {
-    res.render('Upload_Panorama', { title: 'Upload Panorama' });
+    res.render('Upload_Panorama', { title: 'Upload Panorama',req:req });
 });
 
 

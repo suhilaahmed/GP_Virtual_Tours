@@ -8,9 +8,11 @@ var router = express.Router();
 
 var Savephoto = function(req,res) {
 
-    var countryName = req.param('Count');
+    var countryName = req.param('month');
+
+    console.log(countryName);
     var TypeName=req.param('TypeName');
-    var ImagePath = req.param('Image');
+    var ImagePath = req.param('Upload');
     var countryID;
     var connection = DBConn.Conn;
     var querySelectCountry = connection.query('Select CountryID from country where CountryName = ?' , countryName, function(err,rows) {
@@ -18,9 +20,9 @@ var Savephoto = function(req,res) {
         countryID=rows[0].CountryID;
 
 
-     if(TypeName=="City") {
+     if(TypeName=="Cities") {
 
-       var CityName = req.param('CityName');
+       var CityName = req.param('Pname');
        var found = false;
      var querySelectCountry  = connection.query('Select * from city', function(err,rows1) {
              if (err) throw err;
@@ -31,7 +33,7 @@ var Savephoto = function(req,res) {
          }
          if(!found){
              var CityArray={};
-             var Summery = req.param('CitySumm');
+             var Summery = req.param('Desc');
              CityArray = {
                  CountryID : countryID,
                  Name : CityName
@@ -57,7 +59,7 @@ var Savephoto = function(req,res) {
      });
      }
 
-     if(TypeName=="Building"){
+     if(TypeName=="Buildings"){
 
          var BuildingName = req.param('BuildingName');
          var found = false;
@@ -70,7 +72,7 @@ var Savephoto = function(req,res) {
              }
              if(!found){
                  var BuildingArray={};
-                 var Summery = req.param('BuildingSumm');
+                 var Summery = req.param('Desc');
                  BuildingArray = {
                      CountryID : countryID,
                      Name : BuildingName
@@ -96,7 +98,7 @@ var Savephoto = function(req,res) {
          });
 
         }
-     if(TypeName=="Museum"){
+     if(TypeName=="Museums"){
 
          var MuseumName = req.param('MuseumName');
          var found = false;
@@ -109,7 +111,7 @@ var Savephoto = function(req,res) {
              }
              if(!found){
                  var MuseumArray={};
-                 var Summery = req.param('MuseumSumm');
+                 var Summery = req.param('Desc');
                  MuseumArray = {
                      CountryID : countryID,
                      Name : MuseumName
@@ -147,7 +149,7 @@ var Savephoto = function(req,res) {
              }
              if(!found){
                  var OtherArray={};
-                 var Summery = req.param('OtherSumm');
+                 var Summery = req.param('Desc');
                  OtherArray = {
                      CountryID : countryID,
                      Name : OtherName

@@ -26,9 +26,7 @@
         <ul id="overFlow">
           <%var countires= req.session.countries;
           for(var i=0;i<countires.length;i++){
-            if(i==5){
-              break;
-            }
+
           %>
           <li>
             <a name="<%=countires[i].FlagImage%>"><%=countires[i].CountryName%></a>
