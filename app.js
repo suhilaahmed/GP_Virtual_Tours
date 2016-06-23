@@ -15,6 +15,7 @@ var UProfile= require('./routes/UserProfile');
 var UPload= require('./routes/Upload_Panorama');
 var ViewPano = require('./routes/ViewPanorama');
 var SuccessUpload = require('./routes/UploadSuccess_Editor');
+var TestUnity = require('./routes/TestUnity');
 
 var app = express();
 var kinect = new Kinect2();
@@ -57,7 +58,7 @@ app.use('/Hello', hello);
 app.use('/ViewPanorama', ViewPano);
 app.use('/Upload_Panorama', UPload);
 app.use('/UploadSuccess_Editor',SuccessUpload);
-
+app.use('/TestUnity',TestUnity)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
