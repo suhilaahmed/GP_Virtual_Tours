@@ -14,9 +14,20 @@
   <img id="subHeader" src="/images/logoUpdated.png">
   <div id="subHeader2">
   <p>Let us take you to an amazing tour</p>
+    <% var User= req.session.user;
+      if(User==null){
+     %>
   <form action="/SignUp">
     <input id="SignButton" type="submit" name="Signup" value="SIGN UP">
-  </form></div>
+  </form> <%}
+    else {%>
+    <div id="FloatRight">
+    <img class="circle" src="/images/black.png">
+      <a class="LinkStyle"href="/UserProfile"> <%=req.session.user.FullName %></a></div>
+      <%}%>
+
+
+  </div>
   <br><br>
   <div id="menu">
     <ul>
