@@ -1,4 +1,5 @@
 var express = require('express');
+var Kinect2 = require('kinect2');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -16,6 +17,10 @@ var ViewPano = require('./routes/ViewPanorama');
 var SuccessUpload = require('./routes/UploadSuccess_Editor');
 
 var app = express();
+var kinect = new Kinect2();
+var server = require('http').createServer(app);
+
+var io = require('socket.io').listen(server);
 
 ///Sessions/////////////
 ///////////////////////////////////////
@@ -84,5 +89,19 @@ app.use(function(err, req, res, next) {
   });
 });
 
+
+if(kinect.open()) {
+  server.listen(8000);
+  console.log('Server listening on port 3000');
+  console.log('Point your browser to http://localhost:8000');
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use('/', routes);
+
+  kinect.on('bodyFrame', function(bodyFrame){
+    io.sockets.emit('bodyFrame', bodyFrame);
+  });
+
+  kinect.openBodyReader();
+}
 
 module.exports = app;
