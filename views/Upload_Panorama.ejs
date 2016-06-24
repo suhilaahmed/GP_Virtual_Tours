@@ -124,11 +124,11 @@
 
 
     </form>-->
-        <form class="formStyle" action="/UploadSuccess_Editor">
-        <div class="upload">
-            <input  name="Upload" type='file' onchange="readURL(this);" required />
-            <label for="Upload"><span>Upload</span></label>
-        </div>
+        <form enctype="multipart/form-data" class="formStyle" action="/UploadSuccess_Editor" method="post">
+            <div class="upload">
+                <input  name="image" type='file' onchange="readURL(this);" required />
+                <label for="Upload"><span>Upload</span></label>
+            </div>
         <br>
         <img id="blah" src="#" alt="your image" />
 

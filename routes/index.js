@@ -41,5 +41,18 @@ router.get('/',urlencodedParser ,function(req, res, next) {
     req.session.other=oth;
   res.render('index', { title: 'Express' ,req:req , res:res});
 });
+router.post('/',urlencodedParser ,function(req, res, next) {
+    /*delete  req.session.countries;
+     var loadPanos= require('./GetPanoramasDB');
 
+     loadPanos.Load(req,res);*/
+
+    var loginDB = require("./LoginDB");
+    var Complete =loginDB.Login(req,res);
+//var se=wait.forMethod( loginDB.Login(req,res));
+    if(Complete==true) {
+        res.render('index', {title: 'Home', req: req, res: res});
+    }
+
+});
 module.exports = router;
