@@ -39,11 +39,20 @@
     color:#993366;
 }
 .Header #subHeader {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    padding: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 0px;
     text-align: left;
-    color: #CC6699;
+    height: 175px;
+    width:290px;
+    display: inline;
+}
+.Header #subHeader2 {
+    font-family: "Lucida Calligraphy";
+    font-size: 30px;
+    margin-top: 60px;
+    margin-right: 70px;
+    float: right;
+    color: #990033;
+    display: inline;
 }
 #menu {
     position: center;

@@ -1,4 +1,5 @@
 var express = require('express');
+var Kinect2 = require('kinect2');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -14,11 +15,34 @@ var UProfile= require('./routes/UserProfile');
 var UPload= require('./routes/Upload_Panorama');
 var ViewPano = require('./routes/ViewPanorama');
 var SuccessUpload = require('./routes/UploadSuccess_Editor');
+var fs       = require('fs');
+var multer = require('multer'), bodyParser = require('body-parser'),
+    path = require('path');
+var common    = require('./routes/common');
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
+var TestUnity = require('./routes/TestUnity');
 
 var app = express();
+//var kinect = new Kinect2();
+var server = require('http').createServer(app);
+
+var io = require('socket.io').listen(server);
 
 ///Sessions/////////////
 ///////////////////////////////////////
+////upload/////
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, __dirname +'/public/images/uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname) //Appending .jpg
+  }
+});
+
+var upload = multer({ storage: storage});
+  //=====================================================================
+  //======================================================================
 app.use(session({
   secret: 'Session',
   //name: cookie_name,
@@ -39,7 +63,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser({ keepExtensions: true, uploadDir: __dirname + '/public/images/uploads' }));
 app.use('/', routes);
 
 
@@ -51,8 +79,10 @@ app.use('/UserProfile', UProfile);
 app.use('/Hello', hello);
 app.use('/ViewPanorama', ViewPano);
 app.use('/Upload_Panorama', UPload);
-app.use('/UploadSuccess_Editor',SuccessUpload);
-
+app.get('/upload', common.imageForm);
+app.post('/UploadSuccess_Editor' ,urlencodedParser,upload.single('image'), common.uploadImage);
+//app.use('/UploadSuccess_Editor',SuccessUpload);
+app.use('/TestUnity',TestUnity)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -84,5 +114,19 @@ app.use(function(err, req, res, next) {
   });
 });
 
+/*
+if(kinect.open()) {
+  server.listen(8000);
+  console.log('Server listening on port 3000');
+  console.log('Point your browser to http://localhost:8000');
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use('/', routes);
 
+  kinect.on('bodyFrame', function(bodyFrame){
+    io.sockets.emit('bodyFrame', bodyFrame);
+  });
+
+  kinect.openBodyReader();
+}
+*/
 module.exports = app;

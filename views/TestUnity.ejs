@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | TsetBranch</title>
+    <link rel="stylesheet" href="/stylesheets/viewPanorama.css">
+    <link rel="shortcut icon" href="/TemplateData/favicon.ico" />
+    <script src="/TemplateData/UnityProgress.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dreamcodes/social_icons/tsc_social_icons.css" />
+
+
+</head>
+<body class="bodyStyle" >
+<div class="Header">
+    <img id="subHeader" src="/images/logoUpdated.png">
+
+    <div id="menu">
+        <ul>
+            <li><a href="/"  >Home</a></li>
+            <div class="dropdown">
+                <li><a>Countries</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Egypt</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Cities</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Museums</a>
+                    <!-- <ul>
+                       <li><a href="#">Egyptian Museum</a></li>
+                     </ul>-->
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Buildings</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo Tower</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a href="/SignUp" class="current" class="lastmenu">Others</a></li>
+            </div>
+        </ul>
+
+    </div>
+<div id="widCanvas" >
+
+    <canvas  id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+    <br>
+    <canvas id="bodyCanvas" width="398" height="339"></canvas>
+
+</div>
+
+<script type='text/javascript'>
+    var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        dataUrl: "Release/Builds.data",
+        codeUrl: "Release/Builds.js",
+        memUrl: "Release/Builds.mem",
+    };
+</script>
+<script src="/Release/UnityLoader.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/javascripts/kinectControl/KinectSkyBox.js"></script>
+    <input id="SignButton" type="submit" name="share" value="Share">
+    <input id="SignButton" type="submit" name="like" value="Like">
+    <div class="background">
+        <div class="transbox">
+            <img class="circle">
+            <div id="BoxText">
+                <div id="displayLine">
+                    <input id="FollowButton" type="submit" name="like" value="Follow">
+                <p id="UserInfo"> user information here....</p>
+                <a   href="http://www.facebook.com/PLACEHOLDER"><img id="widHigh" src="/images/facebook.png"></a>
+                <a   href="http://www.facebook.com/PLACEHOLDER"><img id="widHigh" src="/images/flickr.png"></a>
+                </div>
+            </div>
+            <p>Username</p>
+            </div>
+    </div>
+    <div class="footer">
+        <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

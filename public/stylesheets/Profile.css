@@ -1,0 +1,256 @@
+
+.bodyStyle {
+    width:100%;
+    padding: 0;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+
+
+}
+
+.Header {
+    margin: auto;
+    width: 960px;
+
+}
+.Header #imgLogo{
+    width:120px;
+    height:100px;
+    float: left;
+    display: inline;
+
+}
+#imgLeft{
+    margin-top: 10%;
+    margin-right: 10%;
+    width:320px;
+    height:200px;
+    float: right;
+
+}
+
+.Header #headerStyle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+    padding: 20px 10px 0px 0px;
+    text-align: center;
+    color:#993366;
+}
+.Header #subHeader {
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    height: 175px;
+    width:290px;
+    display: inline;
+}
+.Header #subHeader2 {
+    font-family: "Lucida Calligraphy";
+    font-size: 30px;
+    margin-top: 60px;
+    margin-right: 70px;
+    float: right;
+    color: #990033;
+    display: inline;
+}
+#menu {
+    position: center;
+    width: 860px;
+    height: 40px;
+    margin: 30px 0 0 0;
+    padding: 20px 20px 20px 30px;
+    background-color:#990033	;
+
+
+}
+
+#menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline;
+}
+
+#menu ul li a{
+    float: left;
+    width: 140px;
+    height: 30px;
+    padding: 10px 0 0 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Verdana";
+    color: white;
+
+}
+
+#menu ul li .lastmenu{
+    border-right: 1px solid #34373b;
+}
+
+#menu li a:hover, #menu li .current{
+    color: white;
+}
+#menu ul ul
+{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#990033;
+    padding:0;
+    color: white;
+    padding: 5px 7px;/*el height wel width*/
+    text-decoration: none;
+
+}
+
+#menu ul ul li
+{
+    float:none;
+    width:100px;
+    padding:0;
+    color: white;
+    padding: 5px 7px;/*el height wel width*/
+    text-decoration: none;
+}
+
+#menu ul ul a
+{
+    line-height:100%;
+    padding:10px 15px;
+    padding:0;
+    color: white;
+    padding: 5px 7px;/*el height wel width*/
+    text-decoration: none;
+}
+
+#menu ul ul ul
+{
+    top:0;
+    left:100%;
+    padding:0;
+    color: white;
+    padding: 5px 7px;/*el height wel width*/
+    text-decoration: none;
+}
+
+#menu ul li:hover > ul
+{
+    display:block;
+    padding:0;
+    color: white;
+    padding: 5px 7px;/*el height wel width*/
+    text-decoration: none;
+}
+
+
+
+.footer {
+    clear: both;
+    padding: 20px 0px 0px 0px;
+    width: 960px;
+    height: 60px;
+    text-align: center;
+}
+
+.footer a{
+    font-weight: normal;
+    color: #CC6699;
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #990033;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    float: left;
+    width: 140px;
+    height: 30px;
+    padding: 10px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Verdana";
+    color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0px;
+
+}
+#overFlow{
+    overflow: scroll;
+    height: 100px;
+}
+.formStyle{
+    width:470px;
+    float: left; padding-top:0px;
+
+}
+
+.formStyle #inputStyle[type="text"] { width: 400px;  height:30px; border-radius: 5px;}
+.formStyle #inputStyle[type="email"] {width:400px; height:30px;border-radius: 5px;}
+.formStyle #inputStyle[type="password"] {width:400px; height:30px;border-radius: 5px;}
+.formStyle #inputStyle[type="submit"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+.formStyle #paragraph {color:#993366;}
+.formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
+.formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}
+.formStyle #IInputStyle[type="file"] {margin-top: 50px}
+.UserImg{
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    text-align: right;
+}
+.circle {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 1em auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 5px solid #7a1f5c;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+div.upload {
+    width: 180px;
+    height: 57px;
+    background:url("http://localhost:3000/images/buttonHeba.png");
+    color: white;
+    overflow: hidden;
+    float: left;
+    margin-top: 30%;
+    border-radius: 5px;
+}
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+#PP{
+
+    background-color: white;
+    width: 150px;
+    height: 200px;
+    padding: 10px;
+    border: 10px solid #990033;
+    float: left;
+    margin-left: 25px;
+    margin-top: 30px;
+
+}

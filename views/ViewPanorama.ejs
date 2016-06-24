@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <link rel='stylesheet' href='/stylesheets/viewPanorama.css' />
+
 </head>
-<body>
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
-<a href="/Login">Login</a>
-<br>
-<br>
-<a href="/SignUp">Sign up</a>
-<br>
-<br>
-
-<p><% for(var i=0;i<req.session.countries.length;i++){
-    %>
-    <%=req.session.countries[i].Name %>
-
-    <%}%>
-    <% for(var i=0;i<req.session.Cities.length;i++){
-    %>
-    <%=req.session.Cities[i].Name %>
-
-    <%}%>
-    <% for(var i=0;i<req.session.buildings.length;i++){
-    %>
-    <%=req.session.buildings[i].Name %>
+<body class="bodyStyle">
 
 
-    <%}
+<div class="Header">
+    <img id="subHeader" src="/images/logoUpdated.png">
+    <div id="subHeader2">
+        <p>Let us take you to an amazing tour</p>
 
-    %>
-</p>
+        </div>
+    <div id="menu">
+        <ul>
+            <li><a href="/"  >Home</a></li>
+            <div class="dropdown">
+                <li><a>Countries</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Egypt</a></li>
+                        <li><a href="#">India</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Cities</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Museums</a>
+                    <!-- <ul>
+                       <li><a href="#">Egyptian Museum</a></li>
+                     </ul>-->
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a>Buildings</a>
+                    <ul id="overFlow">
+                        <li><a href="#">Cairo Tower</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="dropdown">
+                <li><a href="/SignUp" class="current" class="lastmenu">Others</a></li>
+            </div>
+        </ul>
 
-<p>
-    <%=req.session.Uploader.Email%>
-</p>
+    </div>
+
+    <div class="background">
+        <div class="transbox">
+            <p>Username</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>GP Team</strong></a>
+
+    </div>
+
+
+</div>
+
 </body>
 </html>

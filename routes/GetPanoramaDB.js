@@ -133,7 +133,7 @@ var LoadPanoramas = function () {
             var Other = {
                 OtherID: rows[i].OtherID,
                 Name: rows[i].Name,
-                CountryID: rows[i].CountryID}
+                CountryID: rows[i].CountryID};
 
 
             var SelectCityImage = connection.query('Select * from other_image where ? ', post5, function (err, rows7) {

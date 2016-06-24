@@ -10,56 +10,107 @@
 
 
 <div class="Header">
-  <p id="subHeader">Virtual Tours</p>
+
+  <img id="subHeader" src="/images/logoUpdated.png">
+  <div id="subHeader2">
+  <p>Let us take you to an amazing tour</p>
+    <input id="SignButton" type="submit" name="Signup" value="Search">
+    <% var User= req.session.user;
+      if(User==null){
+     %>
+  <form action="/SignUp">
+    <input id="SignButton" type="submit" name="Signup" value="SIGN UP">
+  </form> <%}
+    else {%>
+    <div id="FloatRight">
+    <img class="circle" src="/images/black.png">
+      <a class="LinkStyle"href="/UserProfile"> <%=req.session.user.FullName %></a></div>
+      <%}%>
+
+
+  </div>
+  <br><br>
   <div id="menu">
     <ul>
       <li><a href="/">Home</a></li>
       <div class="dropdown">
         <li><a>Countries</a>
         <ul id="overFlow">
-          <li><a href="#">Egypt</a></li>
-          <li><a href="#">India</a></li>
+          <%var countires= req.session.countries;
+          for(var i=0;i<countires.length;i++){
+
+          %>
+          <li>
+            <a name="<%=countires[i].FlagImage%>"><%=countires[i].CountryName%></a>
+          </li>
+          <%}%>
         </ul>
         </li>
         </div>
       <div class="dropdown">
         <li><a>Cities</a>
           <ul id="overFlow">
-            <li><a href="#">Cairo</a></li>
+            <%var Cities= req.session.Cities;
+            for(var i=0;i<Cities.length;i++){
+              if(i==5){
+                break;
+              }
+            %>
+            <li>
+              <a href="/ViewPanorama?link=<%=Cities[i].ImagePath%>&Type=Cities" name="<%=Cities[i].Name%>"><%=Cities[i].Name%></a>
+            </li>
+            <%}%>
           </ul>
         </li>
         </div>
       <div class="dropdown">
-        <li><a href="/Upload_Panorama">Museums</a>
-         <!-- <ul>
-            <li><a href="#">Egyptian Museum</a></li>
-          </ul>-->
+        <li><a href="/ViewPanorama">Museums</a>
+         <ul id="overFlow">
+           <%var museums= req.session.museums;
+           for(var i=0;i<museums.length;i++){
+             if(i==4){
+               break;
+             }
+           %>
+           <li>
+             <a href="/ViewPanorama?link=<%=museums[i].ImagePath%>&Type=Museums" name="<%=museums[i].Name%>"><%=museums[i].Name%></a>
+           </li>
+           <%}%>
+          </ul>
         </li>
         </div>
       <div class="dropdown">
         <li><a>Buildings</a>
           <ul id="overFlow">
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
-            <li><a href="#">Cairo Tower</a></li>
+            <%var buildings= req.session.buildings;
+            for(var i=0;i<buildings.length;i++){
+
+            %>
+            <li>
+              <a href="/ViewPanorama?link=<%=buildings[i].ImagePath%>&Type=Buildings" name="<%=buildings[i].Name%>"><%=buildings[i].Name%></a>
+            </li>
+            <%}%>
           </ul>
         </li>
       </div>
-
       <div class="dropdown">
-      <li><a href="/SignUp" class="current" class="lastmenu">Sign up</a></li>
+        <li><a>Others</a>
+          <ul id="overFlow">
+            <%var other= req.session.other;
+            for(var i=0;i<other.length;i++){
+
+            %>
+            <li>
+              <a href="/ViewPanorama?link=<%=other[i].ImagePath%>&Type=Other" name="<%=other[i].Name%>"><%=other[i].Name%></a>
+            </li>
+            <%}%>
+          </ul>
+        </li>
       </div>
     </ul>
   </div>
 
-  <img id="imgCover" src="http://localhost:3000/images/cover.jpg">
+  <img id="imgCover" src="/images/cover.jpg">
 
   <div id="content">
 
@@ -68,11 +119,11 @@
       <div class="login_form">
         <h1 id="LoginFormStyle">Login</h1>
 
-        <form class="formStyle" method="get" action="#">
+        <form class="formStyle" method="post" action="/">
           <div ><label id="textColor">Email </label><input id="inputStyle" name="email_address" type="email" class="inputfield" id="email_addremss" maxlength="60"/>
           </div>
           <br>
-          <div><label id="textColor">Password </label><input id="inputStyle" name="password" type="password" class="inputfield" id="password" maxlength="60"/>
+          <div><label id="textColor">Password </label><input id="inputStyle" name="newpassword1" type="password" class="inputfield" id="password" maxlength="60"/>
           </div>
           <br>
           <input id="buttonLogin" type="submit" name="Submit" value="Login" />

@@ -31,11 +31,20 @@
     color:#993366;
 }
 .Header #subHeader {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    padding: 0px 0px 0px 5px;
+    padding: 0px 0px 0px 0px;
     text-align: left;
-    color: #CC6699;
+    height: 175px;
+    width:290px;
+    display: inline;
+}
+.Header #subHeader2 {
+    font-family: "Lucida Calligraphy";
+    font-size: 30px;
+    margin-top: 60px;
+    margin-right: 70px;
+    float: right;
+    color: #990033;
+    display: inline;
 }
 #menu {
     position: center;
@@ -189,77 +198,19 @@
 .formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
 .formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}*/
 
-.box {
-    background-color: white;
-    padding: 6.25rem 1.25rem;
-}
 
-.box + .box {
-    margin-top: 2.5rem;
-}
-.content {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 0 3em 0;
-}
-
-.inputfile + label {
-    max-width: 80%;
-    font-size: 1.25rem;
-    /* 20px */
-    font-weight: 700;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 0.625rem 1.25rem;
-    /* 10px 20px */
-}
-
-.no-js .inputfile + label {
-    display: none;
-}
-
-.inputfile:focus + label,
-.inputfile.has-focus + label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px;
-}
-
-.inputfile + label svg {
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    fill: currentColor;
-    margin-top: -0.25em;
-    /* 4px */
-    margin-right: 0.25em;
-    /* 4px */
-}
-.inputfile-2 + label {
-    color: #d3394c;
-    border: 2px solid currentColor;
-}
-
-.inputfile-2:focus + label,
-.inputfile-2.has-focus + label,
-.inputfile-2 + label:hover {
-    color: #722040;
-}
 #BoxText {
     background-color: white;
-    width: 400px;
-    height: 300px;
+    width: 860px;
+    height: 715px;
     padding: 10px;
-    border: 10px solid #990033;
+    border: 10px solid white;
     float: left;
-    margin-left: 25px;
+    margin-left: 0px;
     margin-top: 30px;
 
 }
+
 .formStyle{
     width:400px;
     float: left; padding-top:0px;
@@ -267,12 +218,57 @@
 }
 .formStyle #Month {width: 200px;  height:30px; border-radius: 5px;}
 .formStyle #paragraph {color:#993366;}
-#inputStyle { float: right; width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+.Uploaddd {
+
+    width: 157px;
+    height: 57px;
+    background-color: #990033;
+    overflow: hidden;
+}
+#UpName{
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+}
+#Hide{
+
+    opacity:0; z-index:2;
+}
+.formStyle #InputStyle[type="text"] { width: 250px;  height:30px; border-radius: 5px;}
+#inputStyle {
+    float: right; margin-left:100px; width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
 #imgRight{
-    margin-top: 20%;
+    margin-top: 30%;
     margin-right: 0%;
-    width:350px;
-    height:150px;
+    width:310px;
+    height:190px;
     float: right;
 
+}
+#SignButton{
+    margin-top: 0px;
+    margin-right: 90px;
+    float: right;
+    width: 100px;
+    height: 30px;
+    background-color: #990033 ;
+    border-color: #990033;
+    border-radius: 5px;
+    font-family: "Verdana";
+    color:white}
+div.upload {
+    width: 180px;
+    height: 57px;
+    background:url("http://localhost:3000/images/buttonHeba.png");
+    color: white;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
 }
