@@ -16,19 +16,27 @@ var GetUploader = function(req,res,Link,type) {
             if (err) throw err;
 
             UserID = rows[0].UserID;
-            GetUploaderDB(UserID);
-            req.session.Uploader=Uploader;
-            res.render('ViewPanorama', { title: 'View',req:req,res:res});
+            GetUploaderDB(UserID,req,res);
+            req.session.ImageObject=rows[0];
+            req.session.ImageID=rows[0].BuildingImageID;
+            console.log(req.session.ImageObject.BuildingImageID);
+            //req.session.Uploader=Uploader;
+
+            //res.render('TestUnity', { title: 'View',req:req,res:res});
         });
     }
-    if (type == "Cities") {
+   else if (type == "Cities") {
         var querySelectImage = connection.query('Select * from city_image where ImagePath = ?', Link, function (err, rows) {
             if (err) throw err;
 
             UserID = rows[0].UserID;
-            GetUploaderDB(UserID);
-            req.session.Uploader=Uploader;
-            res.render('ViewPanorama', { title: 'View',req:req,res:res});
+            console.log(UserID);
+            req.session.ImageObject=rows[0];
+            req.session.ImageID=rows[0].CityImageID;
+            GetUploaderDB(UserID,req,res);
+           // req.session.Uploader=Uploader;
+            console.log(Uploader.FullName+" FUU");
+           // res.render('TestUnity', { title: 'View',req:req,res:res});
 
         });
     }
@@ -37,9 +45,11 @@ var GetUploader = function(req,res,Link,type) {
             if (err) throw err;
 
             UserID = rows[0].UserID;
-            GetUploaderDB(UserID);
-            req.session.Uploader=Uploader;
-            res.render('ViewPanorama', { title: 'View',req:req,res:res});
+            GetUploaderDB(UserID,req,res);
+            req.session.ImageObject=rows[0];
+            req.session.ImageID=rows[0].MuseumImageID;
+            //req.session.Uploader=Uploader;
+           // res.render('TestUnity', { title: 'View',req:req,res:res});
         });
     }
     if (type == "Other") {
@@ -47,16 +57,18 @@ var GetUploader = function(req,res,Link,type) {
             if (err) throw err;
 
             UserID = rows[0].UserID;
-            GetUploaderDB(UserID);
-            req.session.Uploader=Uploader;
-            res.render('ViewPanorama', { title: 'View',req:req,res:res});
+            GetUploaderDB(UserID,req,res);
+            req.session.ImageObject=rows[0];
+            req.session.ImageID=rows[0].OtherImageID;
+           // req.session.Uploader=Uploader;
+
         });
     }
 
 
 };
 
-function GetUploaderDB(UID){
+function GetUploaderDB(UID,req,res){
 
     var connection = DBConn.Conn;
 
@@ -76,10 +88,57 @@ function GetUploaderDB(UID){
             ImagePath: rows[0].ImagePath
         };
 
+        req.session.Uploader=Uploader;
+         //IFFollowLikeShare(req,res,Uploader);
+        var querySelectUser = connection.query('Select * from following ', function(err,rows) {
+            if (err) throw err;
+            for (var i = 0; i < rows.length; i++) {
+                if (rows[i].FollowerID == req.session.user.UserID && rows[i].FollowedID == Uploader.UserID) {
+                    req.session.AlreadyFollowed = true;
 
+                }
+            }
+            res.render('TestUnity', { title: 'View',req:req,res:res});
+        });
+        //res.render('TestUnity', { title: 'View',req:req,res:res});
     });
+
+}
+function IFFollowLikeShare(UID,req,res,Uploader){
+
+    var connection = DBConn.Conn;
+
+    var querySelectUser = connection.query('Select * from Likes ', function(err,rows) {
+        if (err) throw err;
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i].LikerID == req.session.user.UserID && rows[i].LikedID == Uploader.UserID && rows[i].LikedImageID == req.session.ImageID) {
+                req.session.AlreadyLiked = true;
+
+            }
+        }
+    });
+        var querySelectUser = connection.query('Select * from Shares', function(err,rows) {
+            if (err) throw err;
+            for (var i = 0; i < rows.length; i++) {
+                if (rows[i].SharerID == req.session.user.UserID && rows[i].SharedID == Uploader.UserID && rows[i].LikedImageID == req.session.ImageID) {
+                    req.session.AlreadyShared = true;
+
+                }
+            }
+        });
+         var querySelectUser = connection.query('Select * from following ', function(err,rows) {
+             if (err) throw err;
+             for (var i = 0; i < rows.length; i++) {
+                 if (rows[i].FollowerID == req.session.user.UserID && rows[i].FollowedID == Uploader.UserID) {
+                     req.session.AlreadyFollowed = true;
+
+                 }
+             }
+             res.render('TestUnity', { title: 'View',req:req,res:res});
+         });
+
+
 
 }
 
 module.exports.GetUploader=GetUploader;
-module.exports.Uploader=Uploader;

@@ -77,20 +77,35 @@
 <script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/javascripts/kinectControl/KinectSkyBox.js"></script>
+    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="share" value="Share">
+        </form>
+    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="like" value="Like">
+        </form>
     <div class="background">
         <div class="transbox">
-            <img class="circle">
+            <img class="circle" src="<%=req.session.Uploader.ImagePath%>">
             <div id="BoxText">
                 <div id="displayLine">
+                    <% if(req.session.AlreadyFollowed){%>
+                    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
+                        <input id="FollowButton" type="submit" name="like" value="unFollow">
+                    </form>
+                    <%}else{%>
+                    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
                     <input id="FollowButton" type="submit" name="like" value="Follow">
-                <p id="UserInfo"> user information here....</p>
-                <a   href="http://www.facebook.com/PLACEHOLDER"><img id="widHigh" src="/images/facebook.png"></a>
-                <a   href="http://www.facebook.com/PLACEHOLDER"><img id="widHigh" src="/images/flickr.png"></a>
+                    </form>
+                    <%}%>
+                <p id="UserInfo"><%=req.session.Uploader.FullName%>  is an active user
+                    that was born in  <%=req.session.Uploader.BirthDate%>
+                    and upload a frequent panoramas including this amazing one.
+                </p>
+                <a   href="facebook/<%=req.session.Uploader.FacebookAcc%>"><img id="widHigh" src="/images/facebook.png"></a>
+                <a   href="flickr/<%=req.session.Uploader.FlickerAcc%>"><img id="widHigh" src="/images/flickr.png"></a>
                 </div>
             </div>
-            <p>Username</p>
+            <p><%=req.session.Uploader.FullName%></p>
             </div>
     </div>
     <div class="footer">
