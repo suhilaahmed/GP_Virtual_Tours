@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var GetUplo= require('./GetUploaderDB');
 var folo= require('./FollowDB');
 var Like= require('./Like_ShareDB');
 /* GET home page. */

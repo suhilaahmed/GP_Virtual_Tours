@@ -77,17 +77,18 @@
 <script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/javascripts/kinectControl/KinectSkyBox.js"></script>
-    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
+    <form id="formStyle" action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="share" value="Share">
-        </form>
-    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
+    </form>
+    <form id="formStyle" action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="like" value="Like">
         </form>
     <div class="background">
         <div class="transbox">
+            <div id="displayLine">
             <img class="circle" src="<%=req.session.Uploader.ImagePath%>">
             <div id="BoxText">
-                <div id="displayLine">
+
                     <% if(req.session.AlreadyFollowed){%>
                     <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
                         <input id="FollowButton" type="submit" name="like" value="unFollow">
