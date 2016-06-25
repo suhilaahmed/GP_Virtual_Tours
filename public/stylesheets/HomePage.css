@@ -52,7 +52,7 @@
 }
 .Header #subHeader2 {
     font-family: "Lucida Calligraphy";
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 60px;
     margin-right: 70px;
     float: right;
@@ -426,4 +426,7 @@
     color:white}
 #FloatRight{
     float: right;
+}
+#displayLine{
+    display: inline;
 }
