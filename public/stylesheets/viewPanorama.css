@@ -153,7 +153,7 @@
 
 .footer {
     clear: both;
-    padding: 200px 0px 0px 0px;
+    padding: 100px 0px 0px 0px;
     width: 960px;
     height: 60px;
     text-align: center;
@@ -229,16 +229,17 @@
 }
 #BoxText {
     background-color: white;
-    width: 220px;
-    height: 230px;
-    border: 10px solid #990033;
-
-    margin-left: 30px;
+    width: 600px;
+    height: 200px;
+    border: 10px solid white;
+    float: right;
+    margin-right: 30px;
+    margin-top: 5px;
 
 }
 div.background {
     margin-top: 70px;
-    background: url("http://localhost:8000/images/black.png") repeat;
+    background: url("http://localhost:3000/images/black.png") repeat;
     border: 2px solid black;
     width:920px;
     height:300px;
@@ -286,9 +287,43 @@ div.transbox p {
 
 }
 #widHigh{
-    padding: 0px 0px 0px 0px;
-    text-align: left;
-    height: 8px;
-    width:8px;
+    margin-top: 110px;
+    margin-right: 5px;
+    float: right;
+    height: 30px;
+    width:30px;
+    display: inline;
+}
+#SignButton{
+    margin-top:350px;
+    margin-right: 40px;
+    float: right;
+    width: 100px;
+    height: 30px;
+    background-color: #990033 ;
+    border-color: #990033;
+    border-radius: 5px;
+    font-family: "Verdana";
+    color:white
+}
+#FollowButton{
+    margin-top:5px;
+    margin-right: 20px;
+    float: right;
+    width: 100px;
+    height: 30px;
+    background-color: #990033 ;
+    border-color: #990033;
+    border-radius: 5px;
+    font-family: "Verdana";
+    color:white
+}
+#UserInfo{
+    font-family: "Lucida Calligraphy";
+    font-size: 1.2em;
+    color: #990033;
+    margin-top: 10px;
+}
+#displayLine{
     display: inline;
 }

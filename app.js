@@ -23,7 +23,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 var TestUnity = require('./routes/TestUnity');
 
 var app = express();
-var kinect = new Kinect2();
+//var kinect = new Kinect2();
 var server = require('http').createServer(app);
 
 var io = require('socket.io').listen(server);
@@ -114,7 +114,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
+/*
 if(kinect.open()) {
   server.listen(8000);
   console.log('Server listening on port 3000');
@@ -128,5 +128,5 @@ if(kinect.open()) {
 
   kinect.openBodyReader();
 }
-
+*/
 module.exports = app;

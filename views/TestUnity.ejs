@@ -77,16 +77,21 @@
 <script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/javascripts/kinectControl/KinectSkyBox.js"></script>
-
+    <input id="SignButton" type="submit" name="share" value="Share">
+    <input id="SignButton" type="submit" name="like" value="Like">
     <div class="background">
         <div class="transbox">
             <img class="circle">
-            <p>Username</p>
-            <div id="widHigh">
-            <a id="floatingRig"  href="http://www.facebook.com/PLACEHOLDER"></a>
-            <a id="floatingRig"  href="http://www.facebook.com/PLACEHOLDER"></a>
+            <div id="BoxText">
+                <div id="displayLine">
+                    <input id="FollowButton" type="submit" name="like" value="Follow">
+                <p id="UserInfo"> user information here....</p>
+                <a   href="http://www.facebook.com/PLACEHOLDER"><img id="widHigh" src="/images/facebook.png"></a>
+                <a   href="http://www.facebook.com/PLACEHOLDER"><img id="widHigh" src="/images/flickr.png"></a>
+                </div>
             </div>
-        </div>
+            <p>Username</p>
+            </div>
     </div>
     <div class="footer">
         <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
