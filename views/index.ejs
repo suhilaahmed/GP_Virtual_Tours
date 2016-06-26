@@ -15,6 +15,9 @@
   <div id="subHeader2">
   <p>Let us take you to an amazing tour</p>
 
+
+
+
    <!-- <input id="SignButton" type="submit" name="Search" value="Search"> -->
     <% var User= req.session.user;
       if(User==null){
@@ -25,7 +28,7 @@
     else {%>
     <div id="FloatRight">
     <img class="circle" src="/images/black.png">
-      <a class="LinkStyle"href="/UserProfile"> <%=req.session.user.FullName %></a></div>
+      <a id="subHeader3" href="/UserProfile"> <%=req.session.user.FullName %></a></div>
       <%}%>
 
 
