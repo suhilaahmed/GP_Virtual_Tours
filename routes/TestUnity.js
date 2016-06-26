@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var folo= require('./FollowDB');
 var Like= require('./Like_ShareDB');
+var GetUplo= require('./GetUploaderDB');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var link=req.query.link;
