@@ -122,7 +122,9 @@
     <div id="leftcolumn">
       <div class="login_form">
         <h1 id="LoginFormStyle">Login</h1>
-
+         <%if(req.session.ErrorLogin){  %>
+        <p id="ErrorText"><%=req.session.ErrorLogin%></p>
+        <%}%>
         <form class="formStyle" method="post" action="/">
           <div ><label id="textColor">Email </label><input id="inputStyle" name="email_address" type="email" class="inputfield" id="email_addremss" maxlength="60"/>
           </div>
@@ -146,9 +148,9 @@
     </div>
     <div id="BoxText">
       <h3 id="TextInBox">Free</h3>
-      <p id="TextInBox2"> All you need to use our web site is to <a href="https://msdn.microsoft.com/en-us/library/hh438998.aspx">Have a Microdoft Kinect Sensor</a>
+      <p id="TextInBox2"> All you need to use our website is to <a href="https://msdn.microsoft.com/en-us/library/hh438998.aspx">Have a Microsoft Kinect Sensor</a>
         <a href="http://www.microsoftstore.com/store/msusa/en_US/pdp/Kinect-Adapter-for-Windows/productID.308803600">&amp; Kinect Adapter for Windows</a>
-        plug into your Computer and to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=44561">download SDK</a> and install and run it.
+        plug into your Computer and to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=44561">download SDK,</a> install and run it.
         <br>Finally!!you can enjoy different experience</p>
       <a href="https://en.wikipedia.org/wiki/Kinect" id="buttonBox">Learn More about Kinect</a>
     </div>

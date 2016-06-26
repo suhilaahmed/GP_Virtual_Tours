@@ -213,9 +213,10 @@
 .login_form{
     background:#990033;
     width: 190px;
-    height: 210px;
+    height: 255px;
     padding: 20px;
     border: 0px solid #990033;
+
 }
 
 .formStyle{
@@ -437,4 +438,9 @@
 }
 #displayLine{
     display: inline;
+}
+#ErrorText{
+    color: white;
+    font-family: "Lucida Calligraphy";
+    font-size: 1.0em;
 }

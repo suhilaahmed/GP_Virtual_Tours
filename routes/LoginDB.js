@@ -72,7 +72,7 @@ var Login = function (req,res ,next){
                    return true;
                }
                else{
-                   req.session.ErrorLogin="User name, password or email is Wrong!";
+                   req.session.ErrorLogin="* Wrong email or password";
                    res.redirect('/');
                    return false;
                }
