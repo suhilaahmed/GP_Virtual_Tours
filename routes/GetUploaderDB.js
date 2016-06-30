@@ -97,7 +97,7 @@ function GetUploaderDB(UID,req,res){
             for (var i = 0; i < rows.length; i++) {
                 if (rows[i].FollowerID == req.session.user.UserID && rows[i].FollowedID == Uploader.UserID) {
                     req.session.AlreadyFollowed = true;
-                    console.log(req.session.AlreadyFollowed);
+
                     break;
 
                 }
@@ -106,7 +106,17 @@ function GetUploaderDB(UID,req,res){
 
                 }
             }
-            console.log(req.session.AlreadyFollowed);
+            var querySelectUser = connection.query('Select * from Likes ', function(err,rows) {
+                if (err) throw err;
+                for (var i = 0; i < rows.length; i++) {
+                    if (rows[i].LikerID == req.session.user.UserID && rows[i].LikedID == Uploader.UserID && rows[i].LikedImageID == req.session.ImageID) {
+                        req.session.AlreadyLiked = true;
+                        break;
+
+                    }
+                }
+            });
+
             res.render('TestUnity', { title: 'View',req:req,res:res});
         });
         //res.render('TestUnity', { title: 'View',req:req,res:res});

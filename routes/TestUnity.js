@@ -16,18 +16,27 @@ router.post('/', function (req,res,next) {
     var type=req.query.Type;
 
     if(req.body.like=="Follow"){
-        console.log(req.body.like);
- folo.FollowDB(req,res);
+
+        folo.FollowDB(req,res);
         req.session.AlreadyFollowed=true;
     res.render('TestUnity', { title: 'View',req:req,res:res});}
+
     if(req.body.like=="Unfollow"){
-        console.log(req.body.like);
+
         folo.unFollowDB(req,res);
         req.session.AlreadyFollowed=false;
         res.render('TestUnity', { title: 'View',req:req,res:res});}
+
     if(req.body.like=="Like"){
         Like.LikeDB(req,res);
+        req.session.AlreadyLiked=true;
         res.render('TestUnity', { title: 'View',req:req,res:res});}
+
+    if(req.body.like=="unlike"){
+        Like.unLikeDB(req,res);
+        req.session.AlreadyLiked=false;
+        res.render('TestUnity', { title: 'View',req:req,res:res});}
+
     if(req.body.share=="Share"){
         Like.ShareDB(req,res);
         res.render('TestUnity', { title: 'View',req:req,res:res});}

@@ -5,11 +5,9 @@
     <list default="true" id="4c245f59-1c23-443d-afbe-786e6da3e38f" name="Default" comment="kolo&#10;el upload ejs" />
 =======
     <list default="true" id="4c245f59-1c23-443d-afbe-786e6da3e38f" name="Default" comment="kolo&#10;el upload ejs">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DatabaseConn/DBConnection.js" afterPath="$PROJECT_DIR$/DatabaseConn/DBConnection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/viewPanorama.css" afterPath="$PROJECT_DIR$/public/stylesheets/viewPanorama.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/TestUnity.js" afterPath="$PROJECT_DIR$/routes/TestUnity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/TestUnity.ejs" afterPath="$PROJECT_DIR$/views/TestUnity.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/HomePage.css" afterPath="$PROJECT_DIR$/public/stylesheets/HomePage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/LoginDB.js" afterPath="$PROJECT_DIR$/routes/LoginDB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
     </list>
 >>>>>>> 831f6408de0fb2f72015a0efa2905038eb0a3d0d
     <ignored path="Virtual_Tours.iws" />
@@ -31,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.90566">
-              <caret line="125" column="14" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.10704961">
+              <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -44,8 +42,8 @@
       <file leaf-file-name="HomePage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/HomePage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.5272727">
+              <caret line="440" column="1" selection-start-line="440" selection-start-column="1" selection-end-line="440" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -61,14 +59,20 @@
       <file leaf-file-name="TestUnity.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/TestUnity.ejs">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-3.7636364">
               <caret line="101" column="53" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
 >>>>>>> 831f6408de0fb2f72015a0efa2905038eb0a3d0d
+=======
+            <state vertical-scroll-proportion="27.461538">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+>>>>>>> f414283438a8ed2955aac95e9da2aeb1a259b517
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="viewPanorama.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/viewPanorama.css">
@@ -82,6 +86,13 @@
             <state vertical-scroll-proportion="0.6929134">
               <caret line="311" column="17" selection-start-line="311" selection-start-column="17" selection-end-line="311" selection-end-column="17" />
 >>>>>>> 831f6408de0fb2f72015a0efa2905038eb0a3d0d
+=======
+      <file leaf-file-name="viewPanorama.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/viewPanorama.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.418182">
+              <caret line="313" column="17" selection-start-line="313" selection-start-column="17" selection-end-line="313" selection-end-column="17" />
+>>>>>>> f414283438a8ed2955aac95e9da2aeb1a259b517
               <folding />
             </state>
           </provider>
@@ -90,8 +101,8 @@
       <file leaf-file-name="Profile.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/Profile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="294" column="1" selection-start-line="294" selection-start-column="1" selection-end-line="294" selection-end-column="1" />
+            <state vertical-scroll-proportion="-5.923077">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="64" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,8 +111,28 @@
       <file leaf-file-name="UserProfile.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/UserProfile.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            <state vertical-scroll-proportion="-6.076923">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/Login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginDB.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/LoginDB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="53" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -112,6 +143,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="6" column="110" selection-start-line="6" selection-start-column="110" selection-end-line="6" selection-end-column="110" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,8 +197,6 @@
         <option value="$PROJECT_DIR$/views/ViewPanorama.ejs" />
         <option value="$PROJECT_DIR$/views/UserProfile.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/Profile.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/HomePage.css" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/routes/Like_ShareDB.js" />
         <option value="$PROJECT_DIR$/routes/FollowDB.js" />
         <option value="$PROJECT_DIR$/routes/GetUploaderDB.js" />
@@ -165,6 +204,9 @@
         <option value="$PROJECT_DIR$/routes/TestUnity.js" />
         <option value="$PROJECT_DIR$/views/TestUnity.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/viewPanorama.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/HomePage.css" />
+        <option value="$PROJECT_DIR$/routes/LoginDB.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -323,6 +365,9 @@
   </component>
   <component name="RunManager" selected="Node.js.bin\www">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
@@ -685,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/GetPanoramaDB.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -700,26 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/LoginDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/Release/UnityLoader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -788,22 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/UserProfile.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.90566">
-          <caret line="125" column="14" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DatabaseConn/DBConnection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -820,22 +826,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/HomePage.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/viewPanorama.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.418182">
+          <caret line="313" column="17" selection-start-line="313" selection-start-column="17" selection-end-line="313" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/UserProfile.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.076923">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/Profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="294" column="1" selection-start-line="294" selection-start-column="1" selection-end-line="294" selection-end-column="1" />
+        <state vertical-scroll-proportion="-5.923077">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="64" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/TestUnity.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="27.461538">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/LoginDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="53" selection-start-line="74" selection-start-column="53" selection-end-line="74" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/public/stylesheets/viewPanorama.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -847,12 +894,19 @@
         <state vertical-scroll-proportion="-3.7636364">
           <caret line="101" column="53" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
 >>>>>>> 831f6408de0fb2f72015a0efa2905038eb0a3d0d
+=======
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/HomePage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5272727">
+          <caret line="440" column="1" selection-start-line="440" selection-start-column="1" selection-end-line="440" selection-end-column="1" />
+>>>>>>> f414283438a8ed2955aac95e9da2aeb1a259b517
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/viewPanorama.css">
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state vertical-scroll-proportion="0.54146343">
           <caret line="104" column="67" selection-start-line="104" selection-start-column="67" selection-end-line="104" selection-end-column="67" />
@@ -860,6 +914,10 @@
         <state vertical-scroll-proportion="0.6929134">
           <caret line="311" column="17" selection-start-line="311" selection-start-column="17" selection-end-line="311" selection-end-column="17" />
 >>>>>>> 831f6408de0fb2f72015a0efa2905038eb0a3d0d
+=======
+        <state vertical-scroll-proportion="0.10704961">
+          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
+>>>>>>> f414283438a8ed2955aac95e9da2aeb1a259b517
           <folding />
         </state>
       </provider>

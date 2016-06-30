@@ -123,16 +123,23 @@
     <form id="formStyle" action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="share" value="Share">
     </form>
+    <%
+    if(req.session.AlreadyLiked){%>
     <form id="formStyle" action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
-    <input id="SignButton" type="submit" name="like" value="Like">
+    <input id="SignButton" type="submit" name="like" value="unlike">
         </form>
+    <%}else{%>
+    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
+        <input id="SignButton" type="submit" name="like" value="Like">
+    </form>
+    <%}%>
     <div class="background">
         <div class="transbox">
             <div id="displayLine">
             <img class="circle" src="<%=req.session.Uploader.ImagePath%>">
             <div id="BoxText">
 
-                    <% console.log(req.session.AlreadyFollowed+"KKLKLKLK");
+                    <%
                     if(req.session.AlreadyFollowed){%>
                     <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
                         <input id="FollowButton" type="submit" name="like" value="Unfollow">
