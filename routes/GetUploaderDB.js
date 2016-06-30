@@ -90,14 +90,23 @@ function GetUploaderDB(UID,req,res){
 
         req.session.Uploader=Uploader;
          //IFFollowLikeShare(req,res,Uploader);
+        console.log(req.session.user.UserID);
+        console.log(req.session.Uploader.UserID);
         var querySelectUser = connection.query('Select * from following ', function(err,rows) {
             if (err) throw err;
             for (var i = 0; i < rows.length; i++) {
                 if (rows[i].FollowerID == req.session.user.UserID && rows[i].FollowedID == Uploader.UserID) {
                     req.session.AlreadyFollowed = true;
+                    console.log(req.session.AlreadyFollowed);
+                    break;
+
+                }
+                else{
+                    req.session.AlreadyFollowed = false;
 
                 }
             }
+            console.log(req.session.AlreadyFollowed);
             res.render('TestUnity', { title: 'View',req:req,res:res});
         });
         //res.render('TestUnity', { title: 'View',req:req,res:res});

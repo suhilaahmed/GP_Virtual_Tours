@@ -22,34 +22,77 @@
             <div class="dropdown">
                 <li><a>Countries</a>
                     <ul id="overFlow">
-                        <li><a href="#">Egypt</a></li>
-                        <li><a href="#">India</a></li>
+                        <%var countires= req.session.countries;
+                        for(var i=0;i<countires.length;i++){
+
+                        %>
+                        <li>
+                            <a name="<%=countires[i].FlagImage%>"><%=countires[i].CountryName%></a>
+                        </li>
+                        <%}%>
                     </ul>
                 </li>
             </div>
             <div class="dropdown">
                 <li><a>Cities</a>
                     <ul id="overFlow">
-                        <li><a href="#">Cairo</a></li>
+                        <%var Cities= req.session.Cities;
+                        for(var i=0;i<Cities.length;i++){
+                            if(i==5){
+                                break;
+                            }
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=Cities[i].ImagePath%>&Type=Cities" name="<%=Cities[i].Name%>"><%=Cities[i].Name%></a>
+                        </li>
+                        <%}%>
                     </ul>
                 </li>
             </div>
             <div class="dropdown">
-                <li><a>Museums</a>
-                    <!-- <ul>
-                       <li><a href="#">Egyptian Museum</a></li>
-                     </ul>-->
+                <li><a href="/TestUnity">Museums</a>
+                    <ul id="overFlow">
+                        <%var museums= req.session.museums;
+                        for(var i=0;i<museums.length;i++){
+                            if(i==4){
+                                break;
+                            }
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=museums[i].ImagePath%>&Type=Museums" name="<%=museums[i].Name%>"><%=museums[i].Name%></a>
+                        </li>
+                        <%}%>
+                    </ul>
                 </li>
             </div>
+
             <div class="dropdown">
                 <li><a>Buildings</a>
                     <ul id="overFlow">
-                        <li><a href="#">Cairo Tower</a></li>
+                        <%var buildings= req.session.buildings;
+                        for(var i=0;i<buildings.length;i++){
+
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=buildings[i].ImagePath%>&Type=Buildings" name="<%=buildings[i].Name%>"><%=buildings[i].Name%></a>
+                        </li>
+                        <%}%>
                     </ul>
                 </li>
             </div>
             <div class="dropdown">
-                <li><a href="/SignUp" class="current" class="lastmenu">Others</a></li>
+                <li><a>Others</a>
+                    <ul id="overFlow">
+                        <%var other= req.session.other;
+                        for(var i=0;i<other.length;i++){
+
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=other[i].ImagePath%>&Type=Other" name="<%=other[i].Name%>"><%=other[i].Name%></a>
+                        </li>
+                        <%}%>
+                    </ul>
+                </li>
             </div>
         </ul>
 
@@ -77,20 +120,22 @@
 <script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/javascripts/kinectControl/KinectSkyBox.js"></script>
-    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
+    <form id="formStyle" action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="share" value="Share">
-        </form>
-    <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
+    </form>
+    <form id="formStyle" action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
     <input id="SignButton" type="submit" name="like" value="Like">
         </form>
     <div class="background">
         <div class="transbox">
+            <div id="displayLine">
             <img class="circle" src="<%=req.session.Uploader.ImagePath%>">
             <div id="BoxText">
-                <div id="displayLine">
-                    <% if(req.session.AlreadyFollowed){%>
+
+                    <% console.log(req.session.AlreadyFollowed+"KKLKLKLK");
+                    if(req.session.AlreadyFollowed){%>
                     <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">
-                        <input id="FollowButton" type="submit" name="like" value="unFollow">
+                        <input id="FollowButton" type="submit" name="like" value="Unfollow">
                     </form>
                     <%}else{%>
                     <form action="/TestUnity?link=<%=req.query.link%>&Type=<%=req.query.Type%>" method="post">

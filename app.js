@@ -19,6 +19,7 @@ var fs       = require('fs');
 var multer = require('multer'), bodyParser = require('body-parser'),
     path = require('path');
 var common    = require('./routes/common');
+var userr    = require('./routes/UserProfile');
 var urlencodedParser = bodyParser.urlencoded({ extended: true })
 var TestUnity = require('./routes/TestUnity');
 
@@ -75,12 +76,14 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/Login', login);
 app.use('/SignUp', sign);
-app.use('/UserProfile', UProfile);
+//app.use('/UserProfile', UProfile);
 app.use('/Hello', hello);
 app.use('/ViewPanorama', ViewPano);
 app.use('/Upload_Panorama', UPload);
 app.get('/upload', common.imageForm);
+app.get('/upload', userr.imageForm);
 app.post('/UploadSuccess_Editor' ,urlencodedParser,upload.single('image'), common.uploadImage);
+app.post('/UserProfile' ,urlencodedParser,upload.single('image'), userr.uploadImage);
 //app.use('/UploadSuccess_Editor',SuccessUpload);
 app.use('/TestUnity',TestUnity)
 // catch 404 and forward to error handler

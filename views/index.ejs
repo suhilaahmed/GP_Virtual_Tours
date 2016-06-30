@@ -14,7 +14,8 @@
   <img id="subHeader" src="/images/logoUpdated.png">
   <div id="subHeader2">
   <p>Let us take you to an amazing tour</p>
-    <input id="SignButton" type="submit" name="Signup" value="Search">
+
+   <!-- <input id="SignButton" type="submit" name="Search" value="Search"> -->
     <% var User= req.session.user;
       if(User==null){
      %>
@@ -23,7 +24,7 @@
   </form> <%}
     else {%>
     <div id="FloatRight">
-    <img class="circle" src="/images/black.png">
+    <img class="circle" src="<%=req.session.user.ImagePath%>">
       <a class="LinkStyle"href="/UserProfile"> <%=req.session.user.FullName %></a></div>
       <%}%>
 
@@ -57,14 +58,14 @@
               }
             %>
             <li>
-              <a href="/ViewPanorama?link=<%=Cities[i].ImagePath%>&Type=Cities" name="<%=Cities[i].Name%>"><%=Cities[i].Name%></a>
+              <a href="/TestUnity?link=<%=Cities[i].ImagePath%>&Type=Cities" name="<%=Cities[i].Name%>"><%=Cities[i].Name%></a>
             </li>
             <%}%>
           </ul>
         </li>
         </div>
       <div class="dropdown">
-        <li><a href="/ViewPanorama">Museums</a>
+        <li><a href="/TestUnity">Museums</a>
          <ul id="overFlow">
            <%var museums= req.session.museums;
            for(var i=0;i<museums.length;i++){
@@ -73,7 +74,7 @@
              }
            %>
            <li>
-             <a href="/ViewPanorama?link=<%=museums[i].ImagePath%>&Type=Museums" name="<%=museums[i].Name%>"><%=museums[i].Name%></a>
+             <a href="/TestUnity?link=<%=museums[i].ImagePath%>&Type=Museums" name="<%=museums[i].Name%>"><%=museums[i].Name%></a>
            </li>
            <%}%>
           </ul>
@@ -87,7 +88,7 @@
 
             %>
             <li>
-              <a href="/ViewPanorama?link=<%=buildings[i].ImagePath%>&Type=Buildings" name="<%=buildings[i].Name%>"><%=buildings[i].Name%></a>
+              <a href="/TestUnity?link=<%=buildings[i].ImagePath%>&Type=Buildings" name="<%=buildings[i].Name%>"><%=buildings[i].Name%></a>
             </li>
             <%}%>
           </ul>
@@ -101,7 +102,7 @@
 
             %>
             <li>
-              <a href="/ViewPanorama?link=<%=other[i].ImagePath%>&Type=Other" name="<%=other[i].Name%>"><%=other[i].Name%></a>
+              <a href="/TestUnity?link=<%=other[i].ImagePath%>&Type=Other" name="<%=other[i].Name%>"><%=other[i].Name%></a>
             </li>
             <%}%>
           </ul>

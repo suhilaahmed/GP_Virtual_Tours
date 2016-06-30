@@ -31,8 +31,8 @@
     <div id="subHeader2">
     <p >Let us take you to an amazing tour</p>
         <div id="displayLine">
-            <img class="circle" src="">
-            <p id="subHeader3">username</p>
+            <img class="circle" src="<%=req.session.user.ImagePath%>">
+            <p id="subHeader3"><%=req.session.user.FullName%></p>
         </div>
     </div>
     <div id="menu">
@@ -41,55 +41,110 @@
             <div class="dropdown">
                 <li><a>Countries</a>
                     <ul id="overFlow">
-                        <li><a href="#">Egypt</a></li>
-                        <li><a href="#">India</a></li>
+                        <%var countires= req.session.countries;
+                        for(var i=0;i<countires.length;i++){
+
+                        %>
+                        <li>
+                            <a name="<%=countires[i].FlagImage%>"><%=countires[i].CountryName%></a>
+                        </li>
+                        <%}%>
                     </ul>
                 </li>
             </div>
             <div class="dropdown">
                 <li><a>Cities</a>
                     <ul id="overFlow">
-                        <li><a href="#">Cairo</a></li>
+                        <%var Cities= req.session.Cities;
+                        for(var i=0;i<Cities.length;i++){
+                            if(i==5){
+                                break;
+                            }
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=Cities[i].ImagePath%>&Type=Cities" name="<%=Cities[i].Name%>"><%=Cities[i].Name%></a>
+                        </li>
+                        <%}%>
                     </ul>
                 </li>
             </div>
             <div class="dropdown">
-                <li><a>Museums</a>
-                    <!-- <ul>
-                       <li><a href="#">Egyptian Museum</a></li>
-                     </ul>-->
+                <li><a href="/TestUnity">Museums</a>
+                    <ul id="overFlow">
+                        <%var museums= req.session.museums;
+                        for(var i=0;i<museums.length;i++){
+                            if(i==4){
+                                break;
+                            }
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=museums[i].ImagePath%>&Type=Museums" name="<%=museums[i].Name%>"><%=museums[i].Name%></a>
+                        </li>
+                        <%}%>
+                    </ul>
                 </li>
             </div>
+
             <div class="dropdown">
                 <li><a>Buildings</a>
                     <ul id="overFlow">
-                        <li><a href="#">Cairo Tower</a></li>
+                        <%var buildings= req.session.buildings;
+                        for(var i=0;i<buildings.length;i++){
+
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=buildings[i].ImagePath%>&Type=Buildings" name="<%=buildings[i].Name%>"><%=buildings[i].Name%></a>
+                        </li>
+                        <%}%>
                     </ul>
                 </li>
             </div>
             <div class="dropdown">
-                <li><a href="/SignUp" class="current" class="lastmenu">Others</a></li>
+                <li><a>Others</a>
+                    <ul id="overFlow">
+                        <%var other= req.session.other;
+                        for(var i=0;i<other.length;i++){
+
+                        %>
+                        <li>
+                            <a href="/TestUnity?link=<%=other[i].ImagePath%>&Type=Other" name="<%=other[i].Name%>"><%=other[i].Name%></a>
+                        </li>
+                        <%}%>
+                    </ul>
+                </li>
             </div>
         </ul>
 
     </div>
+    <form action="/Upload_Panorama">
+        <input id="SignButton" type="submit" name="upload" value="Upload Panorama">
+    </form>
+    <form action="/">
+        <input id="SignButton" type="submit" name="view" value="View My Panoramas">
+    </form>
 
-    <input id="SignButton" type="submit" name="upload" value="Upload Panorama">
-    <input id="SignButton" type="submit" name="view" value="View My Panoramas">
 
-    <form class="formStyle">
+    <form enctype="multipart/form-data" class="formStyle" action="/UserProfile" method="post">
 
         <div class="upload">
-            <input  name="Upload" type='file' onchange="readURL(this);" />
+            <input  name="image" type='file' onchange="readURL(this);" />
         </div>
         <br>
         <div id="PP">
         <img id="blah" src="#" alt="your image" />
+        <br><br><br><br><input id="inputStyle"  name="submit" value="Upload" type="submit">
         </div>
 
     </form>
     <div id="BoxText">
-        <p id="UserInfo">User information here....</p>
+        <p id="UserInfo">
+            Name : <%=req.session.user.FullName%><br>
+            Email: <%=req.session.user.Email%><br>
+            Birthday : <%=req.session.user.BirthDate%><br>
+            Phone Number : <%=req.session.user.PhoneNumber%><br>
+            Facebook Account : <%=req.session.user.FacebookAcc%><br>
+            Flickr Account : <%=req.session.user.FlickerAcc%>
+        </p>
     </div>
     <div class="footer">
         <a href="#">Home</a> | <a href="#">Services</a> | <a href="#">Solutions</a> | <a href="#">Partners</a> | <a href="#">News</a> | <a href="#">Contact Us</a><br />
