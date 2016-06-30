@@ -3,6 +3,7 @@ var router = express.Router();
 var GetUplo= require('./GetUploaderDB');
 var folo= require('./FollowDB');
 var Like= require('./Like_ShareDB');
+var GetUplo= require('./GetUploaderDB');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var link=req.query.link;
@@ -11,22 +12,37 @@ router.get('/', function(req, res, next) {
     //res.render('TestUnity', { title: 'Unity' });
 });
 router.post('/', function (req,res,next) {
-    if(req.param('like')=="Follow"){
- folo.FollowDB(req,res);
+    var link=req.query.link;
+    var type=req.query.Type;
+
+    if(req.body.like=="Follow"){
+
+        folo.FollowDB(req,res);
+        req.session.AlreadyFollowed=true;
     res.render('TestUnity', { title: 'View',req:req,res:res});}
-    if(req.param('like')=="unFollow"){
+
+    if(req.body.like=="Unfollow"){
+
         folo.unFollowDB(req,res);
-        console.log(req.body.like);
+        req.session.AlreadyFollowed=false;
         res.render('TestUnity', { title: 'View',req:req,res:res});}
-    if(req.param('like')=="Like"){
+
+    if(req.body.like=="Like"){
         Like.LikeDB(req,res);
+        req.session.AlreadyLiked=true;
         res.render('TestUnity', { title: 'View',req:req,res:res});}
-    if(req.param('share')=="Share"){
+
+    if(req.body.like=="unlike"){
+        Like.unLikeDB(req,res);
+        req.session.AlreadyLiked=false;
+        res.render('TestUnity', { title: 'View',req:req,res:res});}
+
+    if(req.body.share=="Share"){
         Like.ShareDB(req,res);
         res.render('TestUnity', { title: 'View',req:req,res:res});}
 
-    else{
-        res.render('TestUnity', { title: 'View',req:req,res:res});}
+    /*else{
+        res.render('TestUnity', { title: 'View',req:req,res:res});}*/
 
 });
 

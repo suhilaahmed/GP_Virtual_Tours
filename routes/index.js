@@ -55,4 +55,10 @@ router.post('/',urlencodedParser ,function(req, res, next) {
     }
 
 });
+
+router.get('/UserProfile', function(req, res, next) {
+
+    res.render('UserProfile', { title: 'Profile' ,req:req,res:res});
+});
+
 module.exports = router;

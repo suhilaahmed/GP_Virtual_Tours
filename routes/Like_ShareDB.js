@@ -14,6 +14,17 @@ var LikeDB= function(req,res){
     var queryInsert = connection.query('INSERT INTO Likes SET ?', like, function (err, result) {
     });
 }
+var unLikeDB= function(req,res){
+    var connection = DBConn.Conn;
+    var like={
+        LikerID:req.session.user.UserID,
+        LikedID:req.session.Uploader.UserID,
+        LikedImageID:req.session.ImageID
+    }
+    var queryInsert = connection.query('delete from likes where LikerID= ? AND LikedID=? AND LikedImageID=?', [req.session.user.UserID,req.session.Uploader.UserID,req.session.ImageID],
+        function (err, result) {
+        });
+}
 var ShareDB= function(req,res){
     var connection = DBConn.Conn;
     var Share={
@@ -26,5 +37,5 @@ var ShareDB= function(req,res){
 }
 
 module.exports.LikeDB=LikeDB;
-
+module.exports.unLikeDB=unLikeDB;
 module.exports.ShareDB=ShareDB;

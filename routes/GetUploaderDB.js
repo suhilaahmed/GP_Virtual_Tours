@@ -90,14 +90,33 @@ function GetUploaderDB(UID,req,res){
 
         req.session.Uploader=Uploader;
          //IFFollowLikeShare(req,res,Uploader);
+        console.log(req.session.user.UserID);
+        console.log(req.session.Uploader.UserID);
         var querySelectUser = connection.query('Select * from following ', function(err,rows) {
             if (err) throw err;
             for (var i = 0; i < rows.length; i++) {
                 if (rows[i].FollowerID == req.session.user.UserID && rows[i].FollowedID == Uploader.UserID) {
                     req.session.AlreadyFollowed = true;
 
+                    break;
+
+                }
+                else{
+                    req.session.AlreadyFollowed = false;
+
                 }
             }
+            var querySelectUser = connection.query('Select * from Likes ', function(err,rows) {
+                if (err) throw err;
+                for (var i = 0; i < rows.length; i++) {
+                    if (rows[i].LikerID == req.session.user.UserID && rows[i].LikedID == Uploader.UserID && rows[i].LikedImageID == req.session.ImageID) {
+                        req.session.AlreadyLiked = true;
+                        break;
+
+                    }
+                }
+            });
+
             res.render('TestUnity', { title: 'View',req:req,res:res});
         });
         //res.render('TestUnity', { title: 'View',req:req,res:res});
