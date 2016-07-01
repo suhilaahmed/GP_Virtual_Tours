@@ -210,7 +210,7 @@
 .formStyle #inputStyle[type="text"] { width: 400px;  height:30px; border-radius: 5px;}
 .formStyle #inputStyle[type="email"] {width:400px; height:30px;border-radius: 5px;}
 .formStyle #inputStyle[type="password"] {width:400px; height:30px;border-radius: 5px;}
-.formStyle #inputStyle[type="submit"] {width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+.formStyle #inputStyle[type="submit"] {margin-left:250px ;margin-top:20px; width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
 .formStyle #paragraph {color:#993366;}
 .formStyle #birthDay {width: 120px;  height:30px; border-radius: 5px;}
 .formStyle #Month {width: 100px;  height:30px; border-radius: 5px;}

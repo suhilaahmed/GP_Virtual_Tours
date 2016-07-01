@@ -31,6 +31,10 @@
     <img id="subHeader" src="/images/logoUpdated.png">
     <div id="subHeader2">
         <p>Let us take you to an amazing tour</p>
+        <div id="displayLine">
+            <img class="circle" src="<%=req.session.user.ImagePath%>">
+            <p id="subHeader3"><%=req.session.user.FullName%></p>
+        </div>
         </div>
     <div id="menu">
         <ul>
@@ -157,7 +161,7 @@
                 <p><label id="paragraph" for="name">Name*</label></p>
                 <input id="InputStyle" name="Pname" placeholder=" City, Museum, Building or Other name.." required="" tabindex="1" type="text">
             <p><label id="paragraph" for="name">Description*</label></p>
-            <input id="InputStyle" name="Desc" placeholder=" Description about City, Museum, Building or Other.." required="" tabindex="1" type="text">
+            <input id="InputStyle1" name="Desc" placeholder=" Description about City, Museum, Building or Other.." required="" tabindex="1" type="text">
                 <br><br><br><br><input id="inputStyle"  name="submit" value="Upload" type="submit">
             </form>
         <form class="formStyle">

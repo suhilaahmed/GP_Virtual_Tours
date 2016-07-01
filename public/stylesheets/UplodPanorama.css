@@ -39,7 +39,7 @@
 }
 .Header #subHeader2 {
     font-family: "Lucida Calligraphy";
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 60px;
     margin-right: 70px;
     float: right;
@@ -235,8 +235,11 @@
     opacity:0; z-index:2;
 }
 .formStyle #InputStyle[type="text"] { width: 250px;  height:30px; border-radius: 5px;}
+.formStyle #InputStyle1[type="text"] { width: 320px;  height:90px; border-radius: 5px;}
+
 #inputStyle {
     float: right; margin-left:100px; width: 100px; height: 30px; background-color: #990033 ; border-color: #990033;border-radius: 5px; font-family: "Verdana";color:white}
+
 #imgRight{
     margin-top: 30%;
     margin-right: 0%;
@@ -271,4 +274,28 @@ div.upload input {
     height: 57px !important;
     opacity: 0 !important;
     overflow: hidden !important;
+}
+.circle {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top:10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    border: 5px solid #990033;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+    float: right;
+    display: inline;
+}
+#displayLine{
+    display: inline;
+}
+#displayLine p{
+    margin-top: 40px;
+    display: inline;
+    margin-right: 20px;
 }
