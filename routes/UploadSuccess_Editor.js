@@ -25,7 +25,7 @@ var Savephoto = function(req,res) {
 
         if(TypeName=="Cities") {
 
-            var CityName = req.param('Pname');
+            var CityName = req.body['Pname'];
             console.log(CityName);
             var found = false;
             var querySelectCountry  = connection.query('Select * from city', function(err,rows1) {
@@ -38,7 +38,7 @@ var Savephoto = function(req,res) {
                 }
                 if(!found){
                     var CityArray={};
-                    var Summery = req.param('Desc');
+                    var Summery = req.body['Desc'];
                     CityArray = {
                         CountryID : countryID,
                         Name : CityName
@@ -69,7 +69,7 @@ var Savephoto = function(req,res) {
 
         if(TypeName=="Buildings"){
 
-            var BuildingName = req.param('BuildingName');
+            var BuildingName = req.body['Pname'];
             var found = false;
             var querySelectCountry  = connection.query('Select * from building', function(err,rows1) {
                 if (err) throw err;
@@ -80,7 +80,7 @@ var Savephoto = function(req,res) {
                 }
                 if(!found){
                     var BuildingArray={};
-                    var Summery = req.param('Desc');
+                    var Summery = req.body['Desc'];
                     BuildingArray = {
                         CountryID : countryID,
                         Name : BuildingName
@@ -94,21 +94,23 @@ var Savephoto = function(req,res) {
                     var BuildingImageArray ={};
                     BuildingImageArray = {
                         Name : BuildingName,
-                        CityID : NewBuildingID,
+                        BuildingID : NewBuildingID,
                         UserID : req.session.user.UserID,
                         ImagePath : ImagePath,
                         Summery : Summery
                     }
+                    console.log(BuildingImageArray)
                     var queryInsert = connection.query('INSERT INTO building_image SET ?', BuildingImageArray, function (err, result) {
                     });
 
                 }
+                console.log(queryInsert);
             });
 
         }
         if(TypeName=="Museums"){
 
-            var MuseumName = req.param('MuseumName');
+            var MuseumName = req.body['Pname'];
             var found = false;
             var querySelectCountry  = connection.query('Select * from museum', function(err,rows1) {
                 if (err) throw err;
@@ -119,7 +121,7 @@ var Savephoto = function(req,res) {
                 }
                 if(!found){
                     var MuseumArray={};
-                    var Summery = req.param('Desc');
+                    var Summery = req.body['Desc'];
                     MuseumArray = {
                         CountryID : countryID,
                         Name : MuseumName
@@ -133,7 +135,7 @@ var Savephoto = function(req,res) {
                     var MuseumImageArray ={};
                     MuseumImageArray = {
                         Name : MuseumName,
-                        CityID : NewMuseumID,
+                        MuseumID : NewMuseumID,
                         UserID : req.session.user.UserID,
                         ImagePath : ImagePath,
                         Summery : Summery
@@ -146,7 +148,7 @@ var Savephoto = function(req,res) {
         }
         if(TypeName=="Others"){
 
-            var OtherName = req.param('OtherName');
+            var OtherName = req.body['Pname'];
             var found = false;
             var querySelectCountry  = connection.query('Select * from other', function(err,rows1) {
                 if (err) throw err;
@@ -157,7 +159,7 @@ var Savephoto = function(req,res) {
                 }
                 if(!found){
                     var OtherArray={};
-                    var Summery = req.param('Desc');
+                    var Summery = req.body['Desc'];
                     OtherArray = {
                         CountryID : countryID,
                         Name : OtherName
@@ -171,7 +173,7 @@ var Savephoto = function(req,res) {
                     var OtherImageArray ={};
                     OtherImageArray = {
                         Name : OtherName,
-                        CityID : NewOtherID,
+                        OtherID : NewOtherID,
                         UserID : req.session.user.UserID,
                         ImagePath : ImagePath,
                         Summery : Summery
